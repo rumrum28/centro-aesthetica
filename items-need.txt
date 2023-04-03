@@ -1,0 +1,56 @@
+needed information
+
+1. list of products 
+2. reservation available date and time (the admin have the ability to disable some dates and times)
+3. customer support/staff number(s) & email(emails)
+4. mailer inquiry email address
+5. social media links
+6. google map - branches location
+7. about us - more info 
+8. logo
+9. data privacy notice - important
+10. terms and conditions - important
+11. testimonials - optional
+12. gallery - optional
+14. company qoute - for the home page - optional
+
+current plan - can be changed if needed
+
+1. account capabilities
+    - login
+    - register
+    - forgot password
+    - change password
+    - edit profile
+    - logout
+
+2. reservation capabilities
+    - reservation form
+    - reservation list
+    - reservation details
+    - reservation edit
+    - reservation delete
+
+3. admin capabilities
+    - login
+    - logout
+    - dashboard
+    - reservation list
+    - reservation details
+    - reservation edit
+    - reservation delete
+    - reservation calendar
+    - reservation calendar edit
+    - reservation calendar delete
+    - reservation calendar add
+ 
+4. other capabilities
+    - contact us
+    - about us
+    - gallery
+    - testimonials
+    - data privacy notice
+    - terms and conditions
+    - social media links
+    - google map
+    - company qoute
