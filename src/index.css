@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.golden {
+  @apply bg-yellow-500;
+}
+
+.gold {
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #bd9c08 0%,
+      #be8513 8%,
+      #b67d01 30%,
+      #a78025 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #d3d324 0%,
+      #cfcf2a 8%,
+      #d6ae40 25%,
+      #8d6e25 62.5%,
+      #74540b 100%
+    );
+}
+
+.gold__text {
+  background-image: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #776100 0%,
+      #be8513 8%,
+      #b67d01 30%,
+      #815e0c 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #e09d00 0%,
+      #ce8600 8%,
+      #d6ae40 25%,
+      #eca601 62.5%,
+      #e09d00 100%
+    );
+  background-image: -webkit-radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #bd9c08 0%,
+      #be8513 8%,
+      #b67d01 30%,
+      #a78025 40%,
+      transparent 80%
+    ),
+    -webkit-radial-gradient(ellipse farthest-corner at left top, #c59c15 0%, #ce8600
+          8%, #d6ae40 25%, #eca601 62.5%, #b37d00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-links a {
+  padding-bottom: 2px;
+}

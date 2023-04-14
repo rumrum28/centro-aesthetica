@@ -6,6 +6,7 @@ import Contact from './pages/contact'
 import Home from './pages/home'
 import Login from './components/login'
 import Register from './pages/register'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<h1>404</h1>} />
       </Routes>
+
+      <Footer />
     </div>
   )
 }

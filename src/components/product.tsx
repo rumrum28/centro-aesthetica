@@ -19,14 +19,7 @@ const Product = () => {
               Article Title
             </a>
           </h1>
-          <Button
-            size="small"
-            variant="contained"
-            sx={{
-              backgroundColor: '#c837bb',
-              ':hover': { backgroundColor: '#932372' },
-            }}
-          >
+          <Button size="small" variant="contained" className="gold">
             Add to cart
           </Button>
         </header>

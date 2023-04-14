@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import DrawerComponent from './drawer'
 import ThemeButton from './themeButton'
-import UserButtons from './userButtons'
 
 export default function Nav() {
   return (
