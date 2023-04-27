@@ -4,7 +4,7 @@ import Nav from './components/nav'
 import About from './pages/about'
 import Contact from './pages/contact'
 import Home from './pages/home'
-import Login from './components/login'
+import Login from './pages/login'
 import Register from './pages/register'
 import Footer from './components/footer'
 
