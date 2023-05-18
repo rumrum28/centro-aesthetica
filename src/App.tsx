@@ -10,9 +10,7 @@ import Footer from './components/footer'
 
 function App() {
   return (
-    <div>
-      <Nav />
-
+    <div className="font-quicksand">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

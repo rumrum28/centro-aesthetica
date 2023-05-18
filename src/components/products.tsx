@@ -1,14 +1,24 @@
-import React from 'react'
 import Product from './product'
 
 const Products = () => {
   return (
-    <div className="container  my-12 mx-auto px-4 md:max-w-6xl">
-      <div className="flex flex-wrap -mx-1 lg:-mx-4">
-        <Product />
-        <Product />
+    <>
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-2xl font-normal text-center">
+          Responsive Card Grid Layout
+        </h1>
+
+        <ul className="flex flex-wrap m-0 p-0">
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+        </ul>
       </div>
-    </div>
+
+      <h3 className="font-normal text-xs mt-8 text-center">Made with ♡</h3>
+    </>
   )
 }
 

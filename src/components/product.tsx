@@ -1,52 +1,39 @@
-import { Button } from '@mui/material'
-import React from 'react'
-
-const Product = () => {
+export default function Product() {
   return (
-    <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-      <article className="overflow-hidden rounded-lg shadow-lg">
-        <a href="#">
+    <li className="flex p-4 sm:w-1/2 md:w-1/3">
+      <div
+        className="bg-white rounded flex flex-col overflow-hidden"
+        style={{ boxShadow: '0 20px 40px -14px rgba(0, 0, 0, 0.25)' }}
+      >
+        <div className="min-h-fit">
           <img
-            alt="Placeholder"
-            className="block h-auto w-full"
-            src="https://picsum.photos/600/400/?random"
+            className="h-auto max-w-full align-middle"
+            src="https://picsum.photos/500/300/?image=10"
+            height={300}
+            width={500}
           />
-        </a>
-
-        <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-          <h1 className="text-lg">
-            <a className="no-underline hover:underline text-black" href="#">
-              Article Title
-            </a>
-          </h1>
-          <Button size="small" variant="contained" className="gold">
-            Add to cart
-          </Button>
-        </header>
-
-        <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-          <a
-            className="flex items-center no-underline hover:underline text-black"
-            href="#"
+        </div>
+        <div
+          className="p-4"
+          style={{
+            background:
+              'linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%)',
+          }}
+        >
+          <h2 className="text-white text-lg font-bold capitalize m-0">
+            Card Grid Layout
+          </h2>
+          <p className="text-white text-sm leading-normal mb-5 font-normal">
+            Demo of pixel perfect pure CSS simple responsive card grid layout
+          </p>
+          <button
+            className="text-white p-3 text-sm uppercase rounded font-normal block w-full cursor-pointer bg-transparent hover:bg-white hover:bg-opacity-5"
+            style={{ border: '1px solid rgba(255, 255, 255, 0.2)' }}
           >
-            <img
-              alt="Placeholder"
-              className="block rounded-full"
-              src="https://picsum.photos/32/32/?random"
-            />
-            <p className="ml-2 text-sm">Author Name</p>
-          </a>
-          <a
-            className="no-underline text-grey-darker hover:text-red-dark"
-            href="#"
-          >
-            <span className="hidden">Like</span>
-            <i className="fa fa-heart"></i>
-          </a>
-        </footer>
-      </article>
-    </div>
+            Read More
+          </button>
+        </div>
+      </div>
+    </li>
   )
 }
-
-export default Product
