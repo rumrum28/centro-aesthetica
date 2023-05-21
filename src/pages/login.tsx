@@ -2,6 +2,7 @@ import { Button, TextField } from '@mui/material'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
+import NavSignIn from '../components/navSignin'
 
 export default function Login({ display }: { display: string }) {
   const [email, setEmail] = useState<string>('')
@@ -48,8 +49,10 @@ export default function Login({ display }: { display: string }) {
   }
 
   return (
-    <div>
-      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)]  items-center">
+    <>
+      {display === 'full-login' && <NavSignIn />}
+
+      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px] items-center">
         {display === 'full-login' && (
           <div className="hidden lg:block w-80 md:w-1/2 xl:w-3/4 h-[calc(100vh-64px)]">
             <img
@@ -179,6 +182,6 @@ export default function Login({ display }: { display: string }) {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }

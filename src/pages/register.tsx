@@ -2,6 +2,7 @@ import { TextField } from '@mui/material'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
+import NavSignIn from '../components/navSignin'
 
 export default function Register() {
   const [email, setEmail] = useState<string>('')
@@ -86,8 +87,9 @@ export default function Register() {
   }
 
   return (
-    <div>
-      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)]  items-center">
+    <>
+      <NavSignIn />
+      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px] items-center">
         <div className="hidden lg:block w-80 md:w-1/2 xl:w-2/3 h-[calc(100vh-64px)]">
           <img
             src="/images/login-banner.jpg"
@@ -187,6 +189,6 @@ export default function Register() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
