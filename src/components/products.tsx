@@ -3,8 +3,8 @@ import Product from './product'
 const Products = () => {
   return (
     <>
-      <div className="mx-auto max-w-6xl mt-4 mb-4">
-        <h1 className="text-2xl font-normal text-center">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-2xl font-normal text-center mt-20">
           Responsive Card Grid Layout
         </h1>
 

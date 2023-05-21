@@ -5,6 +5,7 @@ import AppBar from '@mui/material/AppBar'
 import CssBaseline from '@mui/material/CssBaseline'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 import Slide from '@mui/material/Slide'
+import LinksButton from './linksButton'
 
 function HideOnScroll({ children }: any) {
   const trigger = useScrollTrigger()
@@ -25,45 +26,25 @@ export default function Nav() {
           <nav className="bg-white dark:bg-slate-800 duration-100">
             <div className="max-w-6xl mx-auto px-2">
               <div className="flex items-center justify-between h-16">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center">
-                    <div className="text-2xl font-bold text-pink-300">
+                <div className="flex-shrink-0 cursor-pointer">
+                  <Link to="/" className="flex items-center">
+                    <span className="text-2xl font-bold text-pink-300">
                       Centro
-                    </div>
-                    <div className="text-2xl font-bold text-pink-400">
+                    </span>
+                    <span className="text-2xl font-bold text-pink-400">
                       Aesthetica
-                    </div>
-                  </div>
+                    </span>
+                  </Link>
                 </div>
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                   <div className="ml-10 flex items-baseline space-x-4">
-                    <Link
-                      to="/"
-                      className="text-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
-                    >
-                      Home
-                    </Link>
-                    <Link
-                      to="/about"
-                      className="text-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
-                    >
-                      About
-                    </Link>
-
-                    <Link
-                      to="/contact"
-                      className="text-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
-                    >
-                      Contact
-                    </Link>
-
-                    {/* <UserButtons /> */}
+                    <LinksButton />
 
                     <ThemeButton />
                   </div>
                 </div>
 
-                <div className="block md:hidden">
+                <div className="block lg:hidden">
                   <DrawerComponent />
                 </div>
               </div>

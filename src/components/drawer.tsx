@@ -15,8 +15,35 @@ import MailIcon from '@mui/icons-material/Mail'
 import MenuIcon from '@mui/icons-material/Menu'
 import ThemeButton from './themeButton'
 
+import HomeIcon from '@mui/icons-material/Home'
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
+
+import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd'
+import BookmarkAddOutlinedIcon from '@mui/icons-material/BookmarkAddOutlined'
+
+import LocationOnIcon from '@mui/icons-material/LocationOn'
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
+
+import EngineeringIcon from '@mui/icons-material/Engineering'
+import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined'
+
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
+import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined'
+
+import InfoIcon from '@mui/icons-material/Info'
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
+
+import LiveHelpIcon from '@mui/icons-material/LiveHelp'
+import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined'
+
+import GavelIcon from '@mui/icons-material/Gavel'
+
+import PrivacyTipIcon from '@mui/icons-material/PrivacyTip'
+import PrivacyTipOutlinedIcon from '@mui/icons-material/PrivacyTipOutlined'
+
 const DrawerComponent = () => {
   const [state, setState] = useState<boolean>(false)
+  const [dark, isDark] = useState<boolean>(false)
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -30,6 +57,44 @@ const DrawerComponent = () => {
 
       setState(open)
     }
+
+  const list1 = [
+    { name: 'Home', logo: dark ? <HomeOutlinedIcon /> : <HomeIcon /> },
+    {
+      name: 'Book Appointment',
+      logo: dark ? <BookmarkAddOutlinedIcon /> : <BookmarkAddIcon />,
+    },
+    {
+      name: 'Our Location',
+      logo: dark ? <LocationOnOutlinedIcon /> : <LocationOnIcon />,
+    },
+    {
+      name: 'Our Services',
+      logo: dark ? <EngineeringOutlinedIcon /> : <EngineeringIcon />,
+    },
+    {
+      name: 'Contact Us',
+      logo: dark ? <ContactPhoneOutlinedIcon /> : <ContactPhoneIcon />,
+    },
+  ]
+  const list2 = [
+    {
+      name: 'About Us',
+      logo: dark ? <InfoOutlinedIcon /> : <InfoIcon />,
+    },
+    {
+      name: 'FAQ',
+      logo: dark ? <LiveHelpOutlinedIcon /> : <LiveHelpIcon />,
+    },
+    {
+      name: 'Terms & Conditions',
+      logo: <GavelIcon />,
+    },
+    {
+      name: 'Privacy Policy',
+      logo: dark ? <PrivacyTipOutlinedIcon /> : <PrivacyTipIcon />,
+    },
+  ]
 
   const list = () => (
     <Box
@@ -45,26 +110,22 @@ const DrawerComponent = () => {
           </ListItemButton>
         </ListItem>
 
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {list1.map((data, index) => (
+          <ListItem key={data.name} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemIcon>{data.logo}</ListItemIcon>
+              <ListItemText primary={data.name} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {list2.map((data, index) => (
+          <ListItem key={data.name} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemIcon>{data.logo}</ListItemIcon>
+              <ListItemText primary={data.name} />
             </ListItemButton>
           </ListItem>
         ))}
