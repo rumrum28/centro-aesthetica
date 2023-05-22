@@ -17,7 +17,7 @@ export default function Product() {
           className="p-4"
           style={{
             background:
-              'linear-gradient(to bottom left, #dba028 40%, #f9e471 100%)',
+              'linear-gradient(to bottom left, #dba028 , #f9e471 , #dba028 )',
           }}
         >
           <h2 className="text-white text-lg font-bold capitalize m-0">

@@ -10,8 +10,6 @@ import {
   ListItemText,
 } from '@mui/material'
 import { useState } from 'react'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import MailIcon from '@mui/icons-material/Mail'
 import MenuIcon from '@mui/icons-material/Menu'
 import ThemeButton from './themeButton'
 
@@ -40,10 +38,12 @@ import GavelIcon from '@mui/icons-material/Gavel'
 
 import PrivacyTipIcon from '@mui/icons-material/PrivacyTip'
 import PrivacyTipOutlinedIcon from '@mui/icons-material/PrivacyTipOutlined'
+import { useNavigate } from 'react-router-dom'
 
 const DrawerComponent = () => {
   const [state, setState] = useState<boolean>(false)
   const [dark, isDark] = useState<boolean>(false)
+  const navigate = useNavigate()
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -59,40 +59,52 @@ const DrawerComponent = () => {
     }
 
   const list1 = [
-    { name: 'Home', logo: dark ? <HomeOutlinedIcon /> : <HomeIcon /> },
+    {
+      name: 'Home',
+      logo: dark ? <HomeOutlinedIcon /> : <HomeIcon />,
+      link: '/',
+    },
     {
       name: 'Book Appointment',
       logo: dark ? <BookmarkAddOutlinedIcon /> : <BookmarkAddIcon />,
+      link: '/book',
     },
     {
       name: 'Our Location',
       logo: dark ? <LocationOnOutlinedIcon /> : <LocationOnIcon />,
+      link: '/location',
     },
     {
       name: 'Our Services',
       logo: dark ? <EngineeringOutlinedIcon /> : <EngineeringIcon />,
+      link: '/services',
     },
     {
       name: 'Contact Us',
       logo: dark ? <ContactPhoneOutlinedIcon /> : <ContactPhoneIcon />,
+      link: '/contact',
     },
   ]
   const list2 = [
     {
       name: 'About Us',
       logo: dark ? <InfoOutlinedIcon /> : <InfoIcon />,
+      link: '/about',
     },
     {
       name: 'FAQ',
       logo: dark ? <LiveHelpOutlinedIcon /> : <LiveHelpIcon />,
+      link: '/faq',
     },
     {
       name: 'Terms & Conditions',
       logo: <GavelIcon />,
+      link: '/terms-and-conditions',
     },
     {
       name: 'Privacy Policy',
       logo: dark ? <PrivacyTipOutlinedIcon /> : <PrivacyTipIcon />,
+      link: '/privacy-policy',
     },
   ]
 
@@ -112,7 +124,7 @@ const DrawerComponent = () => {
 
         {list1.map((data, index) => (
           <ListItem key={data.name} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => navigate(data.link)}>
               <ListItemIcon>{data.logo}</ListItemIcon>
               <ListItemText primary={data.name} />
             </ListItemButton>
@@ -123,7 +135,7 @@ const DrawerComponent = () => {
       <List>
         {list2.map((data, index) => (
           <ListItem key={data.name} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => navigate(data.link)}>
               <ListItemIcon>{data.logo}</ListItemIcon>
               <ListItemText primary={data.name} />
             </ListItemButton>
