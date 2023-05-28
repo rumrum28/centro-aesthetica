@@ -16,7 +16,7 @@ export default function LinksButton() {
         Book
       </Link>
       <Link
-        to="/locations"
+        to="/our-locations"
         className="text-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
       >
         Our Locations

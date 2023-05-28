@@ -72,7 +72,7 @@ const DrawerComponent = () => {
     {
       name: 'Our Location',
       logo: dark ? <LocationOnOutlinedIcon /> : <LocationOnIcon />,
-      link: '/location',
+      link: '/our-locations',
     },
     {
       name: 'Our Services',

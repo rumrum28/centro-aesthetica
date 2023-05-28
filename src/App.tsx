@@ -7,6 +7,8 @@ import Login from './pages/login'
 import Register from './pages/register'
 import Footer from './components/footer'
 import Services from './pages/services'
+import OurLocations from './pages/ourLocations'
+import Error404 from './pages/error404'
 
 function App() {
   return (
@@ -17,8 +19,9 @@ function App() {
         <Route path="/login" element={<Login display="full-login" />} />
         <Route path="/register" element={<Register />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/our-locations" element={<OurLocations />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<h1>404</h1>} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
 
       <Footer />
