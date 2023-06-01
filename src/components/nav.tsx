@@ -23,17 +23,23 @@ export default function Nav() {
       <CssBaseline />
       <HideOnScroll>
         <AppBar>
-          <nav className="bg-white dark:bg-slate-800 duration-100">
+          {/* sx={{ boxShadow: 1 }} */}
+
+          <nav className="bg-header-pattern dark:bg-header-patterndark duration-100 ">
             <div className="max-w-6xl mx-auto px-2">
-              <div className="flex items-center justify-between h-16">
+              <div className="flex items-center justify-between h-24">
                 <div className="flex-shrink-0 cursor-pointer">
-                  <Link to="/" className="flex items-center">
-                    <span className="text-2xl font-bold text-pink-300">
-                      Centro
-                    </span>
-                    <span className="text-2xl font-bold text-pink-400">
-                      Aesthetica
-                    </span>
+                  <Link
+                    to="/"
+                    className="flex items-center text-2xl font-bold font-serif tracking-tight"
+                    style={{
+                      backgroundImage:
+                        'linear-gradient(to right,#cb9b51 0, #f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 100%)',
+                      color: 'transparent',
+                      WebkitBackgroundClip: 'text',
+                    }}
+                  >
+                    CentroAesthetica
                   </Link>
                 </div>
                 <div className="hidden lg:block">

@@ -9,8 +9,8 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div className="bg-gray-800 my-4">
-        <div className="container mx-auto">
+      <div className="bg-white dark:bg-gray-800 my-4">
+        <div className="container mx-auto border dark:border-gray-800">
           <div className="flex flex-wrap py-8 flex-col sm:flex-row p-5">
             <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 m-auto sm:m-0">
               <img
@@ -23,7 +23,7 @@ export default function Contact() {
             <div className="sm:pl-10 sm:pt-4 flex-1">
               <div className="flex sm:justify-between sm:flex-row sm:flex-no-wrap justify-center flex-wrap mb-6">
                 <div className="flex flex-wrap md:w-auto w-full md:mb-0 mb-4">
-                  <h2 className="text-white text-2xl w-full mb-3 text-center sm:text-left mt-4 sm:mt-0">
+                  <h2 className="text-slate-900 dark:text-[#efd773] text-2xl w-full mb-3 text-center sm:text-left mt-4 sm:mt-0">
                     Dr. Ruby Roces
                   </h2>
                   <div className="flex sm:w-auto w-full sm:justify-start justify-center">
@@ -72,8 +72,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center border-t border-gray-700 py-5">
-          <a href="#" className="text-white mx-5">
+        <div className="flex justify-center border-t border-[#efd773] py-5">
+          <a href="#" className="text-slate-900 dark:text-[#efd773] mx-5">
             Tell us your concerns
           </a>
         </div>
