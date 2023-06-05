@@ -68,7 +68,7 @@ body {
     ),
     -webkit-radial-gradient(ellipse farthest-corner at left top, #c59c15 0%, #ce8600
           8%, #d6ae40 25%, #eca601 62.5%, #b37d00 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

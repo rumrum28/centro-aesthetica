@@ -31,10 +31,8 @@ export default function Nav() {
                 <div className="flex-shrink-0 cursor-pointer">
                   <Link
                     to="/"
-                    className="flex items-center text-2xl font-bold font-serif tracking-tight"
+                    className="flex items-center text-2xl font-bold font-serif tracking-tight bg-slate-800 dark:bg-logo"
                     style={{
-                      backgroundImage:
-                        'linear-gradient(to right,#cb9b51 0, #f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 100%)',
                       color: 'transparent',
                       WebkitBackgroundClip: 'text',
                     }}

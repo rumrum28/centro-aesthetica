@@ -8,8 +8,9 @@ export default {
         quicksand: ['Quicksand', 'sans-serif'],
       },
       backgroundImage: {
-        'header-pattern': "url('/images/background-test-2.jpg')",
-        'header-patterndark': "url('/images/test.jpg')",
+        'header-pattern': "url('/images/white-background.jpg')",
+        'header-patterndark': "url('/images/dark-background.jpg')",
+        logo: 'linear-gradient(to right,#cb9b51 0, #f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 100%)',
       },
     },
   },

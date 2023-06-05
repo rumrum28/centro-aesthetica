@@ -1,5 +1,11 @@
-import { Button, Container, TextField } from '@mui/material'
 import Layout from '../components/layout'
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone'
+import AttachEmailIcon from '@mui/icons-material/AttachEmail'
+import BusinessIcon from '@mui/icons-material/Business'
+import PersonIcon from '@mui/icons-material/Person'
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
+import SubjectIcon from '@mui/icons-material/Subject'
+import { TextField, InputAdornment } from '@mui/material'
 
 export default function Contact() {
   const handleSubmit = (event: any) => {
@@ -63,11 +69,15 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-500 leading-normal px-4 sm:px-0">
-                Businesses often become known today through effective marketing.
-                The marketing may be in the form of a regular news item or half
-                column society news in the Sunday newspaper. The marketing may
-                be in the form of a heart to heart.
+              <p className="text-gray-500 leading-none px-4 sm:px-0 text-lg">
+                <b className="gold__text" style={{ fontSize: 20 }}>
+                  "
+                </b>
+                Beauty begins the moment you decide to be yourself.
+                <b className="gold__text" style={{ fontSize: 20 }}>
+                  "
+                </b>{' '}
+                - <b>Coco Chanel</b>
               </p>
             </div>
           </div>
@@ -78,35 +88,140 @@ export default function Contact() {
           </a>
         </div>
 
-        {/* create a tailwind Contact Us Page */}
         <div className="flex flex-col items-center justify-center bg-gray-100 py-10">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-5">
               Contact Us
             </h1>
-            <p className="text-gray-600 mb-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quibusdam, voluptatum, quos, quas quia voluptate dolorum
+            <p className="text-gray-600 mb-10 pl-5 pr-5 text-center">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus perferendis in quaerat ab cupiditate vitae minus ex
+              suscipit quam fuga. Ipsum velit culpa, eos cupiditate nesciunt
+              voluptates ea?
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center">
-              <div className="flex flex-col items-center justify-center mb-10 sm:mb-0">
-                <div className="flex items-center justify-center bg-gray-800 rounded-full w-16 h-16 mb-5">
-                  <svg
-                    className="w-8 h-8 fill-current text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M256 0C114.84 0 0 114.84 0 256s114.84 256 256 256 256-114.84 256-256S397.16 0 256 0zm0 480C132.48 480 32 379.52 32 256S132.48 32 256 32s224 100.48 224 224-100.48 224-224 224z" />
-                    <path d="M256 96c-35.29 0-64 28.71-64 64s28.71 64 64 64 64-28.71 64-64-28.71-64-64-64zm0 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z" />
-                  </svg>
+            <div className="flex flex-col sm:flex-row items-center justify-center w-full">
+              <div className="flex flex-col items-center justify-center mb-10 sm:mb-0 w-full sm:max-w-xs md:w-1/2 md:max-w-lg">
+                <div className="flex flex-col items-center justify-center w-full p-5 md:p-0">
+                  <form className="flex flex-col items-center justify-center w-full md:px-5 lg:max-w-lg">
+                    <TextField
+                      label="Your Name"
+                      variant="outlined"
+                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                      sx={{
+                        mb: 2,
+                      }}
+                      fullWidth
+                      inputMode="text"
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">
+                            <PersonIcon />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+                    <TextField
+                      label="Phone Number"
+                      variant="outlined"
+                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                      sx={{
+                        mb: 2,
+                      }}
+                      fullWidth
+                      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">
+                            <PhoneAndroidIcon />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+
+                    <TextField
+                      label="Your Email"
+                      variant="outlined"
+                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                      sx={{
+                        mb: 2,
+                      }}
+                      fullWidth
+                      inputMode="email"
+                      type="email"
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">
+                            <AttachEmailIcon />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+
+                    <TextField
+                      label="Subject"
+                      variant="outlined"
+                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                      sx={{
+                        mb: 2,
+                      }}
+                      fullWidth
+                      inputMode="text"
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">
+                            <SubjectIcon />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+
+                    <textarea
+                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                      placeholder="Your Message"
+                    />
+                    {/* <div className="w-full text-right"> */}
+                    <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-30">
+                      Send Message
+                    </button>
+                    {/* </div> */}
+                  </form>
                 </div>
-                <h2 className="text-xl font-bold text-gray-800 mb-2">
-                  Address
-                </h2>
-                <p className="text-gray-600 text-center">
-                  123 Street, City, Country
-                </p>
+              </div>
+
+              <div className="flex flex-col items-start justify-around sm:ml-5 md:ml-0 md:w-1/2 md:p-5 lg:max-w-md">
+                <div className="flex flex-col sm:flex-row items-center justify-center mb-10 sm:mb-4 md:min-h-[80px] w-full sm:w-auto">
+                  <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
+                    <BusinessIcon
+                      sx={{ color: 'white', height: 28, width: 28, m: 2 }}
+                    />
+                  </div>
+                  <div className="sm:ml-4 text-center sm:text-left">
+                    <h2 className="text-xl font-bold text-gray-800 mb-2">
+                      Addresses
+                    </h2>
+                    <p className="text-gray-600">123 Street, City, Country</p>
+                    <p className="text-gray-600">
+                      street of bitocon internationa Lorem ipsum dolor sit amet.
+                      Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center justify-center mb-10 sm:mb-4 md:h-36 w-full sm:w-auto">
+                  <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
+                    <ContactPhoneIcon
+                      sx={{ color: 'white', height: 28, width: 28, m: 2 }}
+                    />
+                  </div>
+                  <div className="sm:ml-4 text-center sm:text-left">
+                    <h2 className="text-xl font-bold text-gray-800 mb-2">
+                      Contact Number
+                    </h2>
+                    <p className="text-gray-600">09088188140</p>
+                    <p className="text-gray-600">09088188141</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube'
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-100 dark:bg-gray-900 text-white pt-12 pb-8 px-4 border-t">
+    <footer className="bg-header-pattern dark:bg-header-patterndark text-white pt-12 pb-8 px-4 border-t">
       <div className="container overflow-hidden flex flex-col lg:flex-row justify-between mx-auto px-4">
         <h2
           className="block mr-2 w-30 text-2xl font-serif font-bold tracking-tight"
