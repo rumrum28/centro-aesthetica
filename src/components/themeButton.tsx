@@ -4,8 +4,14 @@ import DarkModeIcon from '@mui/icons-material/DarkMode'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LoginModal from './loginModal'
+import useZustand from '../utils/zustand'
+import User from './navbar/user'
 
 const ThemeButton = () => {
+  const { user } = useZustand((state) => ({
+    user: state.user,
+  }))
+
   const [theme, setTheme] = useState<string | null>(
     localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light'
   )
@@ -33,7 +39,8 @@ const ThemeButton = () => {
       <Box
         sx={{
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'start',
+          justifyContent: 'center',
           border: (t) =>
             `1px solid ${theme === 'light' ? t.palette.divider : 'white'}`,
           borderRadius: 1,
@@ -46,21 +53,27 @@ const ThemeButton = () => {
         }}
         className="md:hover:bg-slate-100 dark:md:hover:bg-gray-700 mx-auto"
       >
-        <LoginModal />
+        {user?.name ? (
+          <User name={user?.name} />
+        ) : (
+          <>
+            <LoginModal />
 
-        <Divider
-          orientation="vertical"
-          variant="middle"
-          flexItem
-          className="dark:bg-white"
-        />
+            <Divider
+              orientation="vertical"
+              variant="middle"
+              flexItem
+              className="dark:bg-white"
+            />
 
-        <Link
-          to="/register"
-          className="text-gray-800 md:text-gray-400 hover:text-gray-800  px-3 py-2 rounded-md text-sm font-medium dark:lg:text-gray-400 dark:md:hover:text-white"
-        >
-          Register
-        </Link>
+            <Link
+              to="/register"
+              className="text-gray-800 md:text-gray-400 hover:text-gray-800  px-3 py-2 rounded-md text-sm font-medium dark:lg:text-gray-400 dark:md:hover:text-white"
+            >
+              Register
+            </Link>
+          </>
+        )}
 
         <Divider
           orientation="vertical"

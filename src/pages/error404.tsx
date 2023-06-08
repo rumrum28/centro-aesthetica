@@ -1,16 +1,16 @@
 import { Button } from '@mui/material'
 import Layout from '../components/layout'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 export default function Error404() {
-  const { params } = useParams()
-  console.log(params)
+  let location = useLocation()
 
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center h-[calc(100vh-114px)]">
         <h1 className="text-6xl font-bold">404</h1>
-        <h2 className="text-4xl font-bold">"{params}'s" Page not found</h2>
+        <h3 className="text-4xl font-bold">Page not found</h3>
+        <h2 className="mt-2">Could not find `{location.pathname}`</h2>
 
         {/* tailwind button back to home "/" */}
         <Button

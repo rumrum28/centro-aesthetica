@@ -27,17 +27,37 @@ body {
       ellipse farthest-corner at right bottom,
       #bd9c08 0%,
       #be8513 8%,
-      #b67d01 30%,
-      #a78025 40%,
+      #c08e21 30%,
+      #b88c27 40%,
       transparent 80%
     ),
     radial-gradient(
       ellipse farthest-corner at left top,
-      #d3d324 0%,
-      #cfcf2a 8%,
+      #f1c54b 0%,
+      #e0b849 8%,
       #d6ae40 25%,
-      #8d6e25 62.5%,
-      #74540b 100%
+      #c0932b 62.5%,
+      rgb(145, 105, 14) 100%
+    );
+  transition: background-color 5s ease-in-out;
+}
+
+.gold:hover {
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #f1c54b 0%,
+      #e0b849 8%,
+      #d6ae40 25%,
+      #d6ae40 62.5%,
+      #d6ae40 100%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #bd9c08 0%,
+      #be8513 8%,
+      #c08e21 30%,
+      #b88c27 40%,
+      transparent 80%
     );
 }
 

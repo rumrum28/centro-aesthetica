@@ -1,10 +1,22 @@
 import { Button, TextField } from '@mui/material'
+import LoadingButton from '@mui/lab/LoadingButton'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
 import NavSignIn from '../components/navSignin'
+import CopyRight from '../components/footer/copyright'
+import KeyIcon from '@mui/icons-material/Key'
+import useZustand from '../utils/zustand'
+import LoginChecker from '../components/loginChecker'
 
 export default function Login({ display }: { display: string }) {
+  const { setSnackbar, setSnackbarMessage, isLoggingIn } = useZustand(
+    (state) => ({
+      setSnackbar: state.setSnackbar,
+      setSnackbarMessage: state.setSnackbarMessage,
+      isLoggingIn: state.isLoggingIn,
+    })
+  )
   const [email, setEmail] = useState<string>('')
   const [emailChecker, setEmailChecker] = useState<string>('')
   const [password, setPassword] = useState<string>('')
@@ -12,44 +24,69 @@ export default function Login({ display }: { display: string }) {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const navigate = useNavigate()
 
-  //email validation
   const checkEmail = (email: string) => {
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     return emailRegex.test(email)
   }
 
-  const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const loginHandler = async () => {
     setIsLoading(true)
 
     if (!checkEmail(email)) {
       setEmailChecker('Please enter a valid email address')
-      return null
+      return setIsLoading(false)
     }
     setEmailChecker('')
 
     if (!password) {
       setPasswordChecker('Please enter a password')
-      return null
+      return setIsLoading(false)
     }
     setPasswordChecker('')
 
-    try {
-      await axios.post('/login', {
-        email,
-        password,
-      })
-      navigate('/')
-    } catch (error) {
-      console.log(error)
-    } finally {
-      setIsLoading(false)
+    if (password.length < 5) {
+      setPasswordChecker('Password must be at least 5 characters long')
+      return setIsLoading(false)
     }
+    setPasswordChecker('')
+
+    const url: string = import.meta.env.VITE_LOGIN_API
+
+    let data = JSON.stringify({
+      email,
+      password,
+    })
+
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'http://127.0.0.1:8000/api/login',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: data,
+    }
+
+    await axios
+      .request(config)
+      .then((response) => {
+        setIsLoading(false)
+        if (response.data?.token) isLoggingIn(response.data)
+        const message = response.data?.message || 'Login successful'
+
+        setSnackbarMessage(message)
+        setSnackbar(true)
+      })
+      .catch((error) => {
+        setIsLoading(false)
+        console.log(error)
+      })
   }
 
   return (
     <>
+      <LoginChecker />
       {display === 'full-login' && <NavSignIn />}
 
       <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px] items-center">
@@ -79,8 +116,8 @@ export default function Login({ display }: { display: string }) {
               Log in to your account
             </h1>
 
-            <form className="mt-6" onSubmit={(e) => loginHandler(e)}>
-              <div style={{ minHeight: '79px' }}>
+            <form className="mt-6">
+              <div>
                 <TextField
                   error={emailChecker !== '' ? true : false}
                   id="outlined-error-helper-text"
@@ -101,7 +138,9 @@ export default function Login({ display }: { display: string }) {
                   onChange={(e) => setPassword(e.target.value)}
                   label="Password"
                   autoComplete="current-password"
+                  helperText={passwordChecker}
                   fullWidth
+                  onKeyDown={(e) => e.key === 'Enter' && loginHandler()}
                 />
               </div>
 
@@ -114,14 +153,25 @@ export default function Login({ display }: { display: string }) {
                 </a>
               </div>
 
-              <Button
+              {/* <Button
                 size="large"
                 variant="contained"
                 className="gold"
                 sx={{ width: '100%', marginTop: 2 }}
               >
                 Log In
-              </Button>
+              </Button> */}
+              <LoadingButton
+                onClick={loginHandler}
+                loading={isLoading}
+                loadingPosition="end"
+                endIcon={<KeyIcon />}
+                variant="contained"
+                className="gold"
+                fullWidth
+              >
+                <span>Log In</span>
+              </LoadingButton>
             </form>
 
             <hr className="my-6 border-gray-300 w-full" />
@@ -131,40 +181,7 @@ export default function Login({ display }: { display: string }) {
               className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
             >
               <div className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  // xmlns="https://vecta.io/nano"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 186.69 190.5"
-                >
-                  <g transform="translate(1184.583 765.171)">
-                    <path
-                      clipPath="none"
-                      mask="none"
-                      d="M-1089.333-687.239v36.888h51.262c-2.251 11.863-9.006 21.908-19.137 28.662l30.913 23.986c18.011-16.625 28.402-41.044 28.402-70.052 0-6.754-.606-13.249-1.732-19.483z"
-                      fill="#4285f4"
-                    />
-                    <path
-                      clipPath="none"
-                      mask="none"
-                      d="M-1142.714-651.791l-6.972 5.337-24.679 19.223h0c15.673 31.086 47.796 52.561 85.03 52.561 25.717 0 47.278-8.486 63.038-23.033l-30.913-23.986c-8.486 5.715-19.31 9.179-32.125 9.179-24.765 0-45.806-16.712-53.34-39.226z"
-                      fill="#34a853"
-                    />
-                    <path
-                      clipPath="none"
-                      mask="none"
-                      d="M-1174.365-712.61c-6.494 12.815-10.217 27.276-10.217 42.689s3.723 29.874 10.217 42.689c0 .086 31.693-24.592 31.693-24.592-1.905-5.715-3.031-11.776-3.031-18.098s1.126-12.383 3.031-18.098z"
-                      fill="#fbbc05"
-                    />
-                    <path
-                      d="M-1089.333-727.244c14.028 0 26.497 4.849 36.455 14.201l27.276-27.276c-16.539-15.413-38.013-24.852-63.731-24.852-37.234 0-69.359 21.388-85.032 52.561l31.692 24.592c7.533-22.514 28.575-39.226 53.34-39.226z"
-                      fill="#ea4335"
-                      clipPath="none"
-                      mask="none"
-                    />
-                  </g>
-                </svg>
+                <img src="/svg/google.svg" alt="" className="w-6 h-6" />
                 <span className="ml-4">Log in with Google</span>
               </div>
             </button>
@@ -176,9 +193,7 @@ export default function Login({ display }: { display: string }) {
               </Link>
             </p>
 
-            <p className="text-sm text-gray-500 mt-12 text-center">
-              &copy; 2023 CentroAesthetica - All Rights Reserved.
-            </p>
+            <CopyRight />
           </div>
         </div>
       </section>

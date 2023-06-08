@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
 import NavSignIn from '../components/navSignin'
+import LoginChecker from '../components/loginChecker'
 
 export default function Register() {
   const [email, setEmail] = useState<string>('')
@@ -88,6 +89,7 @@ export default function Register() {
 
   return (
     <>
+      <LoginChecker />
       <NavSignIn />
       <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px] items-center">
         <div className="hidden lg:block w-80 md:w-1/2 xl:w-2/3 h-[calc(100vh-64px)]">

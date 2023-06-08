@@ -15,8 +15,8 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div className="bg-white dark:bg-gray-800 my-4">
-        <div className="container mx-auto border dark:border-gray-800">
+      <div className="bg-white dark:bg-gray-800 my-4 border">
+        <div className="container mx-auto dark:border-gray-800">
           <div className="flex flex-wrap py-8 flex-col sm:flex-row p-5">
             <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 m-auto sm:m-0">
               <img
@@ -190,7 +190,7 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col items-start justify-around sm:ml-5 md:ml-0 md:w-1/2 md:p-5 lg:max-w-md">
-                <div className="flex flex-col sm:flex-row items-center justify-center mb-10 sm:mb-4 md:min-h-[80px] w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center mb-10 sm:mb-4 md:min-h-[80px] w-full sm:w-auto">
                   <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
                     <BusinessIcon
                       sx={{ color: 'white', height: 28, width: 28, m: 2 }}
@@ -198,17 +198,26 @@ export default function Contact() {
                   </div>
                   <div className="sm:ml-4 text-center sm:text-left">
                     <h2 className="text-xl font-bold text-gray-800 mb-2">
-                      Addresses
+                      Our Locations
                     </h2>
-                    <p className="text-gray-600">123 Street, City, Country</p>
-                    <p className="text-gray-600">
-                      street of bitocon internationa Lorem ipsum dolor sit amet.
-                      Lorem ipsum dolor sit amet.
-                    </p>
+                    <ul className="text-sm ml-4">
+                      <li className="text-gray-600">
+                        - 123 Street, City, Country.
+                      </li>
+                      <li className="text-gray-600">
+                        - Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Fuga unde veritatis aut eum nemo error nisi itaque
+                        illum ut autem atque doloremque illo harum quasi,
+                        molestias explicabo numquam cum.
+                      </li>
+                      <li className="text-gray-600">
+                        - Lorem ipsum dolor sit amet consectetur.
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center mb-10 sm:mb-4 md:h-36 w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center mb-10 sm:mb-4 md:h-36 w-full sm:w-auto">
                   <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
                     <ContactPhoneIcon
                       sx={{ color: 'white', height: 28, width: 28, m: 2 }}

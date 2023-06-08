@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import DrawerComponent from './drawer'
 import ThemeButton from './themeButton'
-import AppBar from '@mui/material/AppBar'
+import { Divider, AppBar } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 import Slide from '@mui/material/Slide'
@@ -48,7 +48,7 @@ export default function Nav() {
                   </div>
                 </div>
 
-                <div className="block lg:hidden">
+                <div className="block lg:hidden bg-white dark:bg-gray-800">
                   <DrawerComponent />
                 </div>
               </div>

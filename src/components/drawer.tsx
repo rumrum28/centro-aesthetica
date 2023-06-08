@@ -110,10 +110,11 @@ const DrawerComponent = () => {
 
   const list = () => (
     <Box
-      sx={{ width: 'auto', minWidth: 250 }}
+      sx={{ width: 'auto', minWidth: 280 }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
+      className=" bg-white dark:text-[#efd773] dark:bg-gray-800 h-full"
     >
       <List>
         <ListItem disablePadding>
@@ -122,10 +123,14 @@ const DrawerComponent = () => {
           </ListItemButton>
         </ListItem>
 
+        <Divider sx={{ mb: 2 }} />
+
         {list1.map((data, index) => (
           <ListItem key={data.name} disablePadding>
             <ListItemButton onClick={() => navigate(data.link)}>
-              <ListItemIcon>{data.logo}</ListItemIcon>
+              <ListItemIcon className="dark:text-[#efd773]">
+                {data.logo}
+              </ListItemIcon>
               <ListItemText primary={data.name} />
             </ListItemButton>
           </ListItem>
@@ -136,7 +141,9 @@ const DrawerComponent = () => {
         {list2.map((data, index) => (
           <ListItem key={data.name} disablePadding>
             <ListItemButton onClick={() => navigate(data.link)}>
-              <ListItemIcon>{data.logo}</ListItemIcon>
+              <ListItemIcon className="dark:text-[#efd773]">
+                {data.logo}
+              </ListItemIcon>
               <ListItemText primary={data.name} />
             </ListItemButton>
           </ListItem>

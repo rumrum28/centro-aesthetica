@@ -10,10 +10,10 @@ export default function LinksButton() {
         Home
       </Link>
       <Link
-        to="/book"
+        to="/book-services"
         className="text-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
       >
-        Book
+        Book Services
       </Link>
       <Link
         to="/our-locations"
@@ -21,13 +21,6 @@ export default function LinksButton() {
       >
         Our Locations
       </Link>
-      <Link
-        to="/services"
-        className="text-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
-      >
-        Services
-      </Link>
-
       <Link
         to="/contact"
         className="text-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"

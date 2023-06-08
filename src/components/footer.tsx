@@ -8,10 +8,8 @@ const Footer = () => {
     <footer className="bg-header-pattern dark:bg-header-patterndark text-white pt-12 pb-8 px-4 border-t">
       <div className="container overflow-hidden flex flex-col lg:flex-row justify-between mx-auto px-4">
         <h2
-          className="block mr-2 w-30 text-2xl font-serif font-bold tracking-tight"
+          className="block mr-2 w-30 text-2xl font-serif font-bold tracking-tight bg-slate-800 dark:bg-logo"
           style={{
-            backgroundImage:
-              'linear-gradient(to right,#cb9b51 0, #f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 100%)',
             color: 'transparent',
             WebkitBackgroundClip: 'text',
           }}
