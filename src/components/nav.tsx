@@ -23,8 +23,6 @@ export default function Nav() {
       <CssBaseline />
       <HideOnScroll>
         <AppBar>
-          {/* sx={{ boxShadow: 1 }} */}
-
           <nav className="bg-header-pattern dark:bg-header-patterndark duration-100 ">
             <div className="max-w-6xl mx-auto px-2">
               <div className="flex items-center justify-between h-24">

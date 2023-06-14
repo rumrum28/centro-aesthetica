@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Layout from '../components/layout'
-import Products from '../components/products'
 
 export default function Home() {
   const [isLogin, setIsLogin] = useState<boolean>(true)
@@ -8,7 +7,10 @@ export default function Home() {
   return (
     <Layout>
       {isLogin ? (
-        <Products />
+        <div className="flex flex-col items-center justify-center w-full h-full">
+          <h1 className="text-3xl font-bold">Login</h1>
+          <button onClick={() => setIsLogin(false)}>Register</button>
+        </div>
       ) : (
         <button onClick={() => setIsLogin(true)}>Login</button>
       )}

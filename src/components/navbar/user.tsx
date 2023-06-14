@@ -14,9 +14,10 @@ import Logout from '@mui/icons-material/Logout'
 
 type UserProps = {
   name: string
+  logout: () => void
 }
 
-export default function User({ name }: UserProps) {
+export default function User({ name, logout }: UserProps) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -26,15 +27,19 @@ export default function User({ name }: UserProps) {
     setAnchorEl(null)
   }
   return (
-    <>
+    <div className="w-full">
       <Tooltip title="Account settings">
         <IconButton
           onClick={handleClick}
           size="small"
-          sx={{ margin: '0 8px' }}
+          sx={{
+            margin: '0 8px',
+            '&:hover': { backgroundColor: 'transparent' },
+          }}
           aria-controls={open ? 'account-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
+          className="text-white hover:text-black dark:text-gray-300 dark:hover:text-white"
         >
           {name}
         </IconButton>
@@ -93,13 +98,13 @@ export default function User({ name }: UserProps) {
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={logout}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>
       </Menu>
-    </>
+    </div>
   )
 }

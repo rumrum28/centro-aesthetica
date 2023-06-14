@@ -112,7 +112,7 @@ const DrawerComponent = () => {
     <Box
       sx={{ width: 'auto', minWidth: 280 }}
       role="presentation"
-      onClick={toggleDrawer(false)}
+      // onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
       className=" bg-white dark:text-[#efd773] dark:bg-gray-800 h-full"
     >

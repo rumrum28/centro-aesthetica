@@ -4,12 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  /* background-color: #ecf9ff; */
-}
-
-/* global color #efd773  */
-
 body {
   min-width: 360px;
   color: #272727;

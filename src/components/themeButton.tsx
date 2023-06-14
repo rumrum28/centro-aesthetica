@@ -8,8 +8,9 @@ import useZustand from '../utils/zustand'
 import User from './navbar/user'
 
 const ThemeButton = () => {
-  const { user } = useZustand((state) => ({
+  const { user, logout } = useZustand((state) => ({
     user: state.user,
+    logout: state.logout,
   }))
 
   const [theme, setTheme] = useState<string | null>(
@@ -39,7 +40,7 @@ const ThemeButton = () => {
       <Box
         sx={{
           display: 'flex',
-          alignItems: 'start',
+          alignItems: 'center',
           justifyContent: 'center',
           border: (t) =>
             `1px solid ${theme === 'light' ? t.palette.divider : 'white'}`,
@@ -51,10 +52,10 @@ const ThemeButton = () => {
             mx: 0.5,
           },
         }}
-        className="md:hover:bg-slate-100 dark:md:hover:bg-gray-700 mx-auto"
+        className="md:hover:bg-slate-100 dark:md:hover:bg-gray-700 "
       >
         {user?.name ? (
-          <User name={user?.name} />
+          <User name={user?.name} logout={logout} />
         ) : (
           <>
             <LoginModal />

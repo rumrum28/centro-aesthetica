@@ -16,6 +16,7 @@ type LoginUserState = {
 }
 
 type Zustand = {
+  logout: () => void
   user: LoginUserState | null
   isLoggingIn: (session: Session) => void
   snackbar: boolean
@@ -48,6 +49,12 @@ const pucspispfjsf = (set: any) =>
     setSnackbarMessage: (snackbarMessage: string) => {
       set(() => ({
         snackbarMessage,
+      }))
+    },
+    logout: () => {
+      Cookies.remove('user_session')
+      set(() => ({
+        user: null,
       }))
     },
   } as Zustand)

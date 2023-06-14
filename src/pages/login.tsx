@@ -68,20 +68,22 @@ export default function Login({ display }: { display: string }) {
       data: data,
     }
 
-    await axios
-      .request(config)
-      .then((response) => {
-        setIsLoading(false)
+    try {
+      await axios.request(config).then((response) => {
         if (response.data?.token) isLoggingIn(response.data)
         const message = response.data?.message || 'Login successful'
 
         setSnackbarMessage(message)
         setSnackbar(true)
       })
-      .catch((error) => {
-        setIsLoading(false)
-        console.log(error)
-      })
+    } catch (error: any) {
+      const message = 'Error connecting to server.'
+      setSnackbarMessage(error.message || message)
+      setSnackbar(true)
+      console.log(error)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
