@@ -10,13 +10,10 @@ import useZustand from '../utils/zustand'
 import LoginChecker from '../components/loginChecker'
 
 export default function Login({ display }: { display: string }) {
-  const { setSnackbar, setSnackbarMessage, isLoggingIn } = useZustand(
-    (state) => ({
-      setSnackbar: state.setSnackbar,
-      setSnackbarMessage: state.setSnackbarMessage,
-      isLoggingIn: state.isLoggingIn,
-    })
-  )
+  const { setSnackbar, isLoggingIn } = useZustand((state) => ({
+    setSnackbar: state.setSnackbar,
+    isLoggingIn: state.isLoggingIn,
+  }))
   const [email, setEmail] = useState<string>('')
   const [emailChecker, setEmailChecker] = useState<string>('')
   const [password, setPassword] = useState<string>('')
@@ -73,13 +70,11 @@ export default function Login({ display }: { display: string }) {
         if (response.data?.token) isLoggingIn(response.data)
         const message = response.data?.message || 'Login successful'
 
-        setSnackbarMessage(message)
-        setSnackbar(true)
+        setSnackbar(true, message)
       })
     } catch (error: any) {
       const message = 'Error connecting to server.'
-      setSnackbarMessage(error.message || message)
-      setSnackbar(true)
+      setSnackbar(true, error.message || message)
       console.log(error)
     } finally {
       setIsLoading(false)
@@ -91,9 +86,9 @@ export default function Login({ display }: { display: string }) {
       <LoginChecker />
       {display === 'full-login' && <NavSignIn />}
 
-      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px] items-center">
+      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px]">
         {display === 'full-login' && (
-          <div className="hidden lg:block w-80 md:w-1/2 xl:w-3/4 h-[calc(100vh-64px)]">
+          <div className="hidden lg:block w-80 md:w-5/6 h-[calc(100vh-64px)]">
             <img
               src="/images/login-banner.jpg"
               alt=""
@@ -104,9 +99,7 @@ export default function Login({ display }: { display: string }) {
 
         <div
           className={`bg-white w-full ${
-            display === 'full-login'
-              ? 'md:max-w-md lg:max-w-full md:mx-auto  md:w-1/2 xl:w-1/4'
-              : ''
+            display === 'full-login' ? 'md:max-w-sm mx-auto' : ''
           } h-[calc(100vh-64px)] px-6 lg:px-8 flex items-center justify-center`}
         >
           <div className="w-full h-100">
@@ -155,14 +148,6 @@ export default function Login({ display }: { display: string }) {
                 </a>
               </div>
 
-              {/* <Button
-                size="large"
-                variant="contained"
-                className="gold"
-                sx={{ width: '100%', marginTop: 2 }}
-              >
-                Log In
-              </Button> */}
               <LoadingButton
                 onClick={loginHandler}
                 loading={isLoading}
@@ -190,8 +175,11 @@ export default function Login({ display }: { display: string }) {
 
             <p className="mt-8 text-center">
               Need an account?{' '}
-              <Link to="/register" className="gold__text font-semibold">
-                Create an account
+              <Link
+                to="/register"
+                className="gold__text font-medium text-lg hover:font-bold"
+              >
+                Register
               </Link>
             </p>
 

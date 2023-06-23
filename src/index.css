@@ -12,10 +12,6 @@ body {
   letter-spacing: 0;
 }
 
-.golden {
-  @apply bg-yellow-500;
-}
-
 .gold {
   background: radial-gradient(
       ellipse farthest-corner at right bottom,

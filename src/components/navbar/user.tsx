@@ -34,6 +34,9 @@ export default function User({ name, logout }: UserProps) {
           size="small"
           sx={{
             margin: '0 8px',
+            width: '100%',
+            display: 'block',
+            textAlign: 'left',
             '&:hover': { backgroundColor: 'transparent' },
           }}
           aria-controls={open ? 'account-menu' : undefined}
@@ -41,7 +44,7 @@ export default function User({ name, logout }: UserProps) {
           aria-expanded={open ? 'true' : undefined}
           className="text-white hover:text-black dark:text-gray-300 dark:hover:text-white"
         >
-          {name}
+          {name && name.split(' ')[0]}
         </IconButton>
       </Tooltip>
       <Menu

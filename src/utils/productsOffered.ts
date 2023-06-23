@@ -1,6 +1,6 @@
 //make sample json data
 
-export const servicesOffered = [
+export const ServicesOffered = [
   {
     id: 1,
     title: 'Anti Acne Facial',
@@ -98,7 +98,7 @@ export const servicesOffered = [
   },
 ]
 
-export const slimming = [
+export const Slimming = [
   {
     id: 1,
     title: 'Radio Frequency',
@@ -116,7 +116,7 @@ export const slimming = [
   },
 ]
 
-export const infusions = [
+export const Infusions = [
   {
     id: 1,
     title: 'Glow',
@@ -149,7 +149,7 @@ export const infusions = [
   },
 ]
 
-export const peels = [
+export const Peels = [
   {
     id: 1,
     title: 'Underarms',
@@ -177,7 +177,7 @@ export const peels = [
   },
 ]
 
-export const treatmentsNeedConsultation = [
+export const TreatmentsNeedConsultation = [
   {
     id: 1,
     title: 'Cosmetic Sugeries',
@@ -216,7 +216,7 @@ export const treatmentsNeedConsultation = [
   },
 ]
 
-export const hairRemoval = [
+export const HairRemoval = [
   {
     id: 1,
     title: 'Upper Lips',

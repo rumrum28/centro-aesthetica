@@ -4,15 +4,19 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
 import NavSignIn from '../components/navSignin'
 import LoginChecker from '../components/loginChecker'
+import useZustand from '../utils/zustand'
 
 export default function Register() {
+  const { setSnackbar, isLoggingIn } = useZustand((state) => ({
+    setSnackbar: state.setSnackbar,
+    isLoggingIn: state.isLoggingIn,
+  }))
   const [email, setEmail] = useState<string>('')
   const [emailChecker, setEmailChecker] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [passwordChecker, setPasswordChecker] = useState<string>('')
   const [passwordRetype, setPasswordRetype] = useState<string>('')
-  const [passwordRetypeChecker, setPasswordRetypeChecker] =
-    useState<boolean>(false)
+  const [passwordRetypeChecker, setPasswordRetypeChecker] = useState<string>('')
   const [firstName, setFirstName] = useState<string>('')
   const [lastName, setLastName] = useState<string>('')
   const [terms, setTerms] = useState<boolean>(false)
@@ -20,13 +24,11 @@ export default function Register() {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const navigate = useNavigate()
 
-  //password validation (at least 5 characters check only)
   const checkPassword = (password: string) => {
     const passwordRegex = /^.{5,}$/
     return passwordRegex.test(password)
   }
 
-  //email validation
   const checkEmail = (email: string) => {
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -38,16 +40,23 @@ export default function Register() {
     setIsLoading(true)
     let hasNumber = false,
       hasUpper = false,
-      hasLower = false
+      hasLower = false,
+      passwordSame = false
+
+    if (!firstName) {
+      return setSnackbar(true, 'Please enter your first name')
+    }
+
+    if (!lastName) {
+      return setSnackbar(true, 'Please enter your last name')
+    }
 
     if (!checkEmail(email)) {
-      console.log('Invalid email')
       setEmailChecker('Invalid email')
       return null
     }
     setEmailChecker('')
 
-    //checking password
     if (!checkPassword(password)) {
       setPasswordChecker('Password must be at least 5 characters')
       return null
@@ -68,20 +77,50 @@ export default function Register() {
     } else {
       return setPasswordChecker('Must contain at least 1 lowercase letter')
     }
+
+    setPasswordChecker('')
+
+    if (password && passwordRetype) {
+      if (password === passwordRetype) {
+        passwordSame = true
+      } else {
+        return setPasswordRetypeChecker("Passwords don't match")
+      }
+    } else {
+      return setPasswordRetypeChecker("Password fields can't be empty")
+    }
+    setPasswordRetypeChecker('')
     //end of checking password
 
-    if (hasNumber && hasUpper && hasLower) {
+    let data = JSON.stringify({
+      name: firstName + ' ' + lastName,
+      email: email,
+      password: password,
+    })
+
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'http://127.0.0.1:8000/api/register',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: data,
+    }
+
+    if (hasNumber && hasUpper && hasLower && passwordSame) {
       try {
-        await axios.post('/login', {
-          email,
-          password,
+        await axios.request(config).then((response) => {
+          if (response.data?.token) isLoggingIn(response.data)
+          const message = response.data?.message || 'Login successful'
+
+          setSnackbar(true, message)
         })
-        navigate('/dashboard')
-      } catch (error) {
+      } catch (error: any) {
+        const message = 'Error connecting to server.'
+        setSnackbar(true, error.message || message)
         console.log(error)
       } finally {
-        setPassword('')
-        setEmail('')
         setIsLoading(false)
       }
     }
@@ -91,8 +130,8 @@ export default function Register() {
     <>
       <LoginChecker />
       <NavSignIn />
-      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px] items-center">
-        <div className="hidden lg:block w-80 md:w-1/2 xl:w-2/3 h-[calc(100vh-64px)]">
+      <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px]">
+        <div className="hidden lg:block w-80 md:w-5/6 h-[calc(100vh-64px)]">
           <img
             src="/images/login-banner.jpg"
             alt=""
@@ -100,7 +139,7 @@ export default function Register() {
           />
         </div>
 
-        <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto  md:w-1/2 xl:w-1/3 h-[calc(100vh-64px)] px-6 lg:px-12 flex items-center justify-center">
+        <div className="bg-white w-full md:max-w-sm md:mx-auto h-[calc(100vh-64px)] px-6 flex items-center justify-center">
           <div className="w-full h-100">
             <div className="flex items-center">
               <div className="text-2xl font-bold">logo-here</div>
@@ -113,21 +152,17 @@ export default function Register() {
             <form className="mt-6" onSubmit={(e) => registerHandler(e)}>
               <div className="flex justify-center items-center">
                 <TextField
-                  error={emailChecker !== '' ? true : false}
                   id="outlined-firstname"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   label="First Name"
-                  helperText={emailChecker}
                   fullWidth
                 />
                 <TextField
-                  error={emailChecker !== '' ? true : false}
                   id="outlined-lastname"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                   label="Last Name"
-                  helperText={emailChecker}
                   fullWidth
                 />
               </div>
@@ -159,13 +194,13 @@ export default function Register() {
 
               <div className="mt-3">
                 <TextField
-                  error={passwordRetypeChecker}
+                  error={passwordRetypeChecker !== '' ? true : false}
                   id="outlined-retype-password-input"
                   type="password"
                   value={passwordRetype}
                   onChange={(e) => setPasswordRetype(e.target.value)}
                   label="Retype Password"
-                  helperText={passwordChecker}
+                  helperText={passwordRetypeChecker}
                   fullWidth
                 />
               </div>
@@ -180,7 +215,10 @@ export default function Register() {
 
             <p className="mt-8 text-center">
               Already have an account?{' '}
-              <Link to="/login" className="gold__text font-semibold">
+              <Link
+                to="/login"
+                className="gold__text font-medium text-lg hover:font-bold"
+              >
                 Sign In
               </Link>
             </p>

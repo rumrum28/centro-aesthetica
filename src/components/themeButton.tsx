@@ -52,7 +52,7 @@ const ThemeButton = () => {
             mx: 0.5,
           },
         }}
-        className="md:hover:bg-slate-100 dark:md:hover:bg-gray-700 "
+        className="md:hover:bg-slate-100 dark:md:hover:bg-gray-700 w-full lg:w-auto"
       >
         {user?.name ? (
           <User name={user?.name} logout={logout} />
@@ -69,7 +69,7 @@ const ThemeButton = () => {
 
             <Link
               to="/register"
-              className="text-gray-800 md:text-gray-400 hover:text-gray-800  px-3 py-2 rounded-md text-sm font-medium dark:lg:text-gray-400 dark:md:hover:text-white"
+              className="text-gray-500 hover:text-gray-800  px-3 py-2 rounded-md text-sm font-medium dark:text-gray-400 dark:hover:text-white"
             >
               Register
             </Link>

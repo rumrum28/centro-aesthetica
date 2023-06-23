@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Badge,
 } from '@mui/material'
 import { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -66,8 +67,16 @@ const DrawerComponent = () => {
     },
     {
       name: 'Book Appointment',
-      logo: dark ? <BookmarkAddOutlinedIcon /> : <BookmarkAddIcon />,
-      link: '/book',
+      logo: dark ? (
+        <Badge color="error" overlap="circular" badgeContent={1}>
+          <BookmarkAddOutlinedIcon />
+        </Badge>
+      ) : (
+        <Badge color="error" overlap="circular" badgeContent={1}>
+          <BookmarkAddIcon />
+        </Badge>
+      ),
+      link: '/book-services',
     },
     {
       name: 'Our Location',
@@ -112,7 +121,6 @@ const DrawerComponent = () => {
     <Box
       sx={{ width: 'auto', minWidth: 280 }}
       role="presentation"
-      // onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
       className=" bg-white dark:text-[#efd773] dark:bg-gray-800 h-full"
     >
@@ -126,7 +134,11 @@ const DrawerComponent = () => {
         <Divider sx={{ mb: 2 }} />
 
         {list1.map((data, index) => (
-          <ListItem key={data.name} disablePadding>
+          <ListItem
+            key={data.name}
+            disablePadding
+            className="hover:bg-orange-100 dark:hover:bg-slate-500"
+          >
             <ListItemButton onClick={() => navigate(data.link)}>
               <ListItemIcon className="dark:text-[#efd773]">
                 {data.logo}
@@ -139,7 +151,11 @@ const DrawerComponent = () => {
       <Divider />
       <List>
         {list2.map((data, index) => (
-          <ListItem key={data.name} disablePadding>
+          <ListItem
+            key={data.name}
+            disablePadding
+            className="hover:bg-orange-100 dark:hover:bg-slate-500"
+          >
             <ListItemButton onClick={() => navigate(data.link)}>
               <ListItemIcon className="dark:text-[#efd773]">
                 {data.logo}
@@ -154,9 +170,12 @@ const DrawerComponent = () => {
 
   return (
     <>
-      <Button onClick={toggleDrawer(true)}>
-        <MenuIcon className="text-gray-800 dark:text-white" />
-      </Button>
+      <Badge color="error" overlap="circular" badgeContent={1}>
+        <Button onClick={toggleDrawer(true)} sx={{ minWidth: '36px' }}>
+          <MenuIcon className="text-gray-800 dark:text-white" />
+        </Button>
+      </Badge>
+
       <Drawer anchor="right" open={state} onClose={toggleDrawer(false)}>
         {list()}
       </Drawer>

@@ -51,14 +51,14 @@ const LoginModal = () => {
       {windowWidth > 767 ? (
         <div
           onClick={toggleDrawer(true)}
-          className="cursor-pointer text-gray-800 md:text-gray-400 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium dark:lg:text-gray-400 dark:md:hover:text-white "
+          className="cursor-pointer text-gray-500 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium dark:text-gray-400 dark:hover:text-white "
         >
           Login
         </div>
       ) : (
         <div
           onClick={handleRedirect}
-          className="cursor-pointer text-gray-800 md:text-gray-400 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium dark:lg:text-gray-400 dark:md:hover:text-white "
+          className="cursor-pointer text-gray-500 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium dark:text-gray-400 dark:hover:text-white "
         >
           Login
         </div>

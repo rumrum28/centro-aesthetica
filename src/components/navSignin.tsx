@@ -24,7 +24,7 @@ export default function NavSignIn() {
       <HideOnScroll>
         <AppBar>
           <nav className="bg-white dark:bg-slate-800 duration-100">
-            <div className="max-w-6xl mx-auto px-2">
+            <div className="max-w-7xl mx-auto px-2">
               <div className="flex items-center justify-between h-16">
                 <div className="flex-shrink-0 cursor-pointer">
                   <Link to="/" className="flex items-center">
@@ -37,7 +37,7 @@ export default function NavSignIn() {
                   </Link>
                 </div>
                 <div className="hidden lg:block">
-                  <div className="ml-10 flex space-x-4 justify-center items-center">
+                  <div className="flex justify-center items-center">
                     <LinksButton />
 
                     <ThemeButtonOnly />

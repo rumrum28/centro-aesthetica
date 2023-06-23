@@ -3,21 +3,17 @@ import useZustand from '../utils/zustand'
 import CloseIcon from '@mui/icons-material/Close'
 
 export default function SnackBar() {
-  const { snackbar, setSnackbar, snackbarMessage, setSnackbarMessage } =
-    useZustand((state) => ({
-      snackbar: state.snackbar,
-      setSnackbar: state.setSnackbar,
-      snackbarMessage: state.snackbarMessage,
-      setSnackbarMessage: state.setSnackbarMessage,
-    }))
+  const { snackbar, setSnackbar } = useZustand((state) => ({
+    snackbar: state.snackbar,
+    setSnackbar: state.setSnackbar,
+  }))
 
   const handleClose = (
     event: React.SyntheticEvent | Event,
     reason?: string
   ) => {
     if (reason === 'clickaway') return
-    setSnackbar(false)
-    setSnackbarMessage('')
+    setSnackbar(false, '')
   }
 
   const action = (
@@ -39,10 +35,10 @@ export default function SnackBar() {
         vertical: 'bottom',
         horizontal: 'right',
       }}
-      open={snackbar}
+      open={snackbar.status}
       autoHideDuration={6000}
       onClose={handleClose}
-      message={snackbarMessage}
+      message={snackbar.message}
       action={action}
     />
   )

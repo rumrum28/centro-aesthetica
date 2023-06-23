@@ -7,7 +7,7 @@ export default function Error404() {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-114px)]">
+      <div className="flex flex-col items-center justify-center">
         <h1 className="text-6xl font-bold">404</h1>
         <h3 className="text-4xl font-bold">Page not found</h3>
         <h2 className="mt-2">Could not find `{location.pathname}`</h2>

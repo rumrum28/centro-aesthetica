@@ -29,7 +29,7 @@ export default function PerServices({
   return (
     <Card
       sx={{ width: '100%' }}
-      className="dark:bg-slate-700 dark:text-slate-50"
+      className="dark:bg-[#202938] dark:text-slate-50"
       elevation={3}
     >
       <CardHeader
@@ -63,7 +63,7 @@ export default function PerServices({
           {price}
         </Typography>
         <Button variant="contained" className="gold">
-          Book Now
+          Book
         </Button>
       </CardActions>
     </Card>

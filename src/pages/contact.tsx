@@ -6,6 +6,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import SubjectIcon from '@mui/icons-material/Subject'
 import { TextField, InputAdornment } from '@mui/material'
+import PageTitle from '../components/pageTitle'
 
 export default function Contact() {
   const handleSubmit = (event: any) => {
@@ -15,7 +16,7 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div className="bg-white dark:bg-gray-800 my-4 border">
+      <div className="bg-white dark:bg-gray-800 border">
         <div className="container mx-auto dark:border-gray-800">
           <div className="flex flex-wrap py-8 flex-col sm:flex-row p-5">
             <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 m-auto sm:m-0">
@@ -88,20 +89,12 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-gray-100 py-10">
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-bold text-gray-800 mb-5">
-              Contact Us
-            </h1>
-            <p className="text-gray-600 mb-10 pl-5 pr-5 text-center">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus perferendis in quaerat ab cupiditate vitae minus ex
-              suscipit quam fuga. Ipsum velit culpa, eos cupiditate nesciunt
-              voluptates ea?
-            </p>
+        <div className="flex flex-col items-center justify-center bg-gray-100 py-6">
+          <div className="flex flex-col items-center justify-start w-full">
+            <PageTitle additionalClass="mb-4 w-full p-5" title="Contact Us" />
 
-            <div className="flex flex-col sm:flex-row items-center justify-center w-full">
-              <div className="flex flex-col items-center justify-center mb-10 sm:mb-0 w-full sm:max-w-xs md:w-1/2 md:max-w-lg">
+            <div className="flex flex-col sm:flex-row items-start justify-center w-full">
+              <div className="flex flex-col items-center justify-center mb-10 sm:mb-0 w-full sm:max-w-xs sm:w-1/2 md:max-w-lg">
                 <div className="flex flex-col items-center justify-center w-full p-5 md:p-0">
                   <form className="flex flex-col items-center justify-center w-full md:px-5 lg:max-w-lg">
                     <TextField
@@ -165,6 +158,7 @@ export default function Contact() {
                       sx={{
                         mb: 2,
                       }}
+                      placeholder="Email title"
                       fullWidth
                       inputMode="text"
                       InputProps={{
@@ -189,7 +183,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start justify-around sm:ml-5 md:ml-0 md:w-1/2 md:p-5 lg:max-w-md">
+              <div className="flex flex-col items-start justify-around sm:ml-5 md:ml-0 w-full md:p-5">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center mb-10 sm:mb-4 md:min-h-[80px] w-full sm:w-auto">
                   <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
                     <BusinessIcon
@@ -197,9 +191,7 @@ export default function Contact() {
                     />
                   </div>
                   <div className="sm:ml-4 text-center sm:text-left">
-                    <h2 className="text-xl font-bold text-gray-800 mb-2">
-                      Our Locations
-                    </h2>
+                    <PageTitle title="Our Locations" additionalClass="mb-2" />
                     <ul className="text-sm ml-4">
                       <li className="text-gray-600">
                         - 123 Street, City, Country.
@@ -224,9 +216,7 @@ export default function Contact() {
                     />
                   </div>
                   <div className="sm:ml-4 text-center sm:text-left">
-                    <h2 className="text-xl font-bold text-gray-800 mb-2">
-                      Contact Number
-                    </h2>
+                    <PageTitle title="Contact Number" additionalClass="mb-2" />
                     <p className="text-gray-600">09088188140</p>
                     <p className="text-gray-600">09088188141</p>
                   </div>

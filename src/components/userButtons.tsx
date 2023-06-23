@@ -1,5 +1,4 @@
 import { Box, Divider, IconButton } from '@mui/material'
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const UserButtons = () => {
@@ -35,7 +34,7 @@ const UserButtons = () => {
 
         <Link
           to="/register"
-          className="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm hover:font-medium dark:text-white"
+          className="text-slate-600 hover:text-slate-800 px-3 py-2 rounded-md text-sm hover:font-medium dark:text-slate-200 dark:hover:text-white"
         >
           Register
         </Link>

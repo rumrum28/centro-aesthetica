@@ -18,6 +18,18 @@ export default {
       colors: {
         'custom-gold-background':
           'radial-gradient( ellipse farthest-corner at right bottom, #bd9c08 0%, #be8513 8%, #b67d01 30%, #a78025 40%, transparent 80% ), radial-gradient( ellipse farthest-corner at left top, #d3d324 0%, #cfcf2a 8%, #d6ae40 25%, #8d6e25 62.5%, #74540b 100% )',
+        dark: '#1D2144',
+        black: '#090E34',
+        'body-color': '#959CB1',
+        current: 'currentColor',
+        transparent: 'transparent',
+        white: '#FFFFFF',
+        primary: '#ceb700',
+        yellow: '#FBB040',
+      },
+
+      screens: {
+        xs: '360px',
       },
     },
   },

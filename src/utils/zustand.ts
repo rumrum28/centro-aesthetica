@@ -19,8 +19,11 @@ type Zustand = {
   logout: () => void
   user: LoginUserState | null
   isLoggingIn: (session: Session) => void
-  snackbar: boolean
-  setSnackbar: (snackbar: boolean) => void
+  snackbar: {
+    status: boolean
+    message: string
+  }
+  setSnackbar: (snackbar: boolean, snackbarMessage: string) => void
   snackbarMessage: string
   setSnackbarMessage: (snackbarMessage: string) => void
 }
@@ -39,16 +42,16 @@ const pucspispfjsf = (set: any) =>
         },
       }))
     },
-    snackbar: false,
-    setSnackbar: (snackbar: boolean) => {
-      set(() => ({
-        snackbar,
-      }))
+    snackbar: {
+      status: false,
+      message: '',
     },
-    snackbarMessage: '',
-    setSnackbarMessage: (snackbarMessage: string) => {
+    setSnackbar: (snackbar: boolean, snackbarMessage: string) => {
       set(() => ({
-        snackbarMessage,
+        snackbar: {
+          status: snackbar,
+          message: snackbarMessage,
+        },
       }))
     },
     logout: () => {
