@@ -89,7 +89,7 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-gray-100 py-6">
+        <div className="flex flex-col items-center justify-center bg-gray-100 dark:bg-transparent py-6">
           <div className="flex flex-col items-center justify-start w-full">
             <PageTitle additionalClass="mb-4 w-full p-5" title="Contact Us" />
 
@@ -183,7 +183,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start justify-around sm:ml-5 md:ml-0 w-full md:p-5">
+              <div className="flex flex-col items-start justify-around sm:ml-5 md:ml-0 md:w-1/2 w-full md:p-5">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center mb-10 sm:mb-4 md:min-h-[80px] w-full sm:w-auto">
                   <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
                     <BusinessIcon

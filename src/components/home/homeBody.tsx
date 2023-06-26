@@ -17,10 +17,10 @@ const HomeBody = () => {
   )
 
   return (
-    <section className="pt-20 max-w-7xl mx-auto w-full">
+    <section className="pt-11 max-w-7xl mx-auto w-full">
       <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-        <div className="-mx-4 flex flex-wrap items-center">
-          <div className="w-full px-4 lg:w-1/2">
+        <div className="flex flex-wrap items-center">
+          <div className="w-full mx-auto px-4 md:w-4/5 lg:w-1/2">
             <SectionTitle
               title="Flawless Skin"
               paragraph="Try our hydra facial treatment. It is a non-invasive, multi-step treatment that combines the benefits of next-level hydradermabrasion, a chemical peel, automated painless extractions (no pinching!) and a special delivery of Antioxidants, Hyaluronic Acid and Peptides. It does all of this in one quick treatment that delivers real results without downtime or irritation."
@@ -32,13 +32,13 @@ const HomeBody = () => {
               data-wow-delay=".15s"
             >
               <div className="mx-[-12px] flex flex-wrap">
-                <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                <div className="px-3 w-1/2 ">
                   <List text="Glow" />
                   <List text="Repair" />
                   <List text="Protect" />
                 </div>
 
-                <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                <div className="px-3 w-1/2 ">
                   <List text="Whiten" />
                   <List text="Anti-Aging" />
                   <List text="Hydra Facial" />

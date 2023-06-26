@@ -15,23 +15,18 @@ export default function Locations() {
       />
 
       <section className="py-9 max-w-7xl mx-auto">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
-              <div
-                key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-              >
-                <SingleLocations blog={blog} />
-              </div>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center">
+          {blogData.map((blog) => (
+            <div
+              key={blog.id}
+              className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
+            >
+              <SingleLocations blog={blog} />
+            </div>
+          ))}
         </div>
 
-        <div
-          className="wow fadeInUp -mx-4 flex flex-wrap"
-          data-wow-delay=".15s"
-        >
+        <div className="wow fadeInUp flex flex-wrap" data-wow-delay=".15s">
           <div className="w-full px-4">
             <ul className="flex items-center justify-center pt-8">
               <li className="mx-1">

@@ -83,11 +83,11 @@ const DrawerComponent = () => {
       logo: dark ? <LocationOnOutlinedIcon /> : <LocationOnIcon />,
       link: '/our-locations',
     },
-    {
-      name: 'Our Services',
-      logo: dark ? <EngineeringOutlinedIcon /> : <EngineeringIcon />,
-      link: '/services',
-    },
+    // {
+    //   name: 'Our Services',
+    //   logo: dark ? <EngineeringOutlinedIcon /> : <EngineeringIcon />,
+    //   link: '/services',
+    // },
     {
       name: 'Contact Us',
       logo: dark ? <ContactPhoneOutlinedIcon /> : <ContactPhoneIcon />,

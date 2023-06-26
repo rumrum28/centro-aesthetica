@@ -1,6 +1,6 @@
-//make sample json data
+import { Services } from '../types/services'
 
-export const ServicesOffered = [
+export const ServicesOffered: Services = [
   {
     id: 1,
     title: 'Anti Acne Facial',
@@ -14,6 +14,8 @@ export const ServicesOffered = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
   {
     id: 2,
@@ -28,6 +30,8 @@ export const ServicesOffered = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
   {
     id: 3,
@@ -42,6 +46,8 @@ export const ServicesOffered = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
   {
     id: 4,
@@ -55,6 +61,8 @@ export const ServicesOffered = [
       'whitening mask',
       'moisturizing cream / sunblock',
     ],
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
   {
     id: 5,
@@ -67,6 +75,8 @@ export const ServicesOffered = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
   {
     id: 6,
@@ -79,6 +89,8 @@ export const ServicesOffered = [
       'help improve overall skin texture',
       'tone and apperance',
     ],
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
   {
     id: 7,
@@ -86,6 +98,8 @@ export const ServicesOffered = [
     price: 1250,
     packagePrice: 5000,
     description: 'Package 4 + 1 sessions. With free Acne set cosmetics',
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
   {
     id: 8,
@@ -95,6 +109,8 @@ export const ServicesOffered = [
       'mechanical exfoliation that removes excess oil',
       'dirt and dead cells on the surface of the skin to reveal younger brighter skin',
     ],
+    image: '/images/body-2.jpg',
+    duration: 60,
   },
 ]
 

@@ -26,6 +26,7 @@ export default {
         white: '#FFFFFF',
         primary: '#ceb700',
         yellow: '#FBB040',
+        darkgold: '#efd773',
       },
 
       screens: {

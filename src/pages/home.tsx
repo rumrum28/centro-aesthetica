@@ -30,9 +30,11 @@ export default function Home() {
         />
 
         <div className="relative z-10 flex justify-center items-center h-full">
-          <h1 className="text-white text-2xl">Welcome to Our Website</h1>
+          <h1 className="hidden sm:block text-white text-2xl">
+            Welcome to Our Website
+          </h1>
 
-          <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+          <div className="absolute bottom-0 left-0 right-0 hidden sm:flex justify-center">
             <div className="animate-bounce text-slate-300 hover:text-slate-50 pb-5 cursor-pointer">
               <ExpandCircleDownIcon sx={{ fontSize: 32 }} />
             </div>

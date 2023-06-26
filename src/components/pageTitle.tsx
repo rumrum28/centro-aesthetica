@@ -5,7 +5,9 @@ type PageTitleProps = {
 
 const PageTitle = ({ title, additionalClass }: PageTitleProps) => {
   return (
-    <h1 className={`text-xl font-semibold dark:text-white ${additionalClass}`}>
+    <h1
+      className={`text-xl font-semibold font-serif dark:text-white ${additionalClass}`}
+    >
       {title}
     </h1>
   )

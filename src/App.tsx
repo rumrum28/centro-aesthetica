@@ -13,6 +13,7 @@ import PrivacyPolicy from './pages/privacyPolicy'
 import TermsAndConditions from './pages/termsAndConditions'
 import Cart from './pages/cart'
 import Locations from './pages/locations'
+import SoloService from './pages/service'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<Login display="full-login" />} />
         <Route path="/register" element={<Register />} />
         <Route path="/book-services" element={<Services />} />
+        <Route path="/book-services/service" element={<SoloService />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/our-locations" element={<Locations />} />
