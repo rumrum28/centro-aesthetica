@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
       <div className="container px-4">
         <PageTitle title="Terms and Conditions" />
 
-        <div className="row py-3">
+        <div className="row py-3 text-black dark:text-slate-400">
           <div className="col-md-12">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

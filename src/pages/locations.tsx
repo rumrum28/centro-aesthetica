@@ -10,11 +10,11 @@ export default function Locations() {
     <>
       <Nav />
       <Breadcrumb
-        description="Welcome to our exquisite cosmetic stores, where beauty meets convenience! Step into our store located at SM City Manila, where we open our doors from 10 a.m. to 9 p.m., offering you a wide range of high-quality cosmetics to enhance your natural radiance. For early risers and late-night shoppers, our store at the Greenhills Shopping Center welcomes you from 9 a.m. to 6 a.m., ensuring you never miss a chance to pamper yourself. Exciting news awaits as we proudly announce our new branch in Candaba, where you can indulge in the world of beauty during our regular store hours. From luxurious skincare products to trendy makeup essentials, our stores are your one-stop destination for all things glamorous. Open on weekends or always during mall hours."
+        description="The cosmetic stores, located at SM City Manila, Greenhills Shopping Center, and a new branch in Candaba, offer high-quality beauty products. The Manila store operates from 10 a.m. to 9 p.m., the Greenhills store from 9 a.m. to 6 a.m., and the Candaba store during regular hours. The stores, which stock a variety of skincare and makeup essentials, are positioned as one-stop beauty destinations. They are open on weekends and conform to mall operating hours."
         pageName="Our Locations"
       />
 
-      <section className="py-9 max-w-7xl mx-auto">
+      <section className="py-9 max-w-6xl mx-auto">
         <div className="flex flex-wrap justify-center">
           {blogData.map((blog) => (
             <div

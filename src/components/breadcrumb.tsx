@@ -11,7 +11,7 @@ const Breadcrumb = ({
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
-        <div className="container mx-auto dark:border-gray-800 bg-white dark:bg-gray-800 max-w-7xl">
+        <div className="container mx-auto dark:border-gray-800 bg-white dark:bg-gray-800 max-w-6xl">
           <div className="flex flex-wrap flex-col sm:flex-row p-5">
             <div className="w-full mb-4">
               <ul className="flex items-center justify-start">

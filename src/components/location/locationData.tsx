@@ -7,7 +7,7 @@ const blogData: Location[] = [
     paragraph:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.',
     image: 'https://cdn.worlddata.info/maps/region/phl-metro-manila.png',
-    tags: ['creative'],
+    tags: ['Click to zoom'],
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const blogData: Location[] = [
     paragraph:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.',
     image: 'https://cdn.worlddata.info/maps/region/phl-metro-manila.png',
-    tags: ['computer'],
+    tags: ['Click to zoom'],
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const blogData: Location[] = [
     paragraph:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.',
     image: 'https://cdn.worlddata.info/maps/region/phl-metro-manila.png',
-    tags: ['design'],
+    tags: ['Click to zoom'],
   },
 ]
 export default blogData

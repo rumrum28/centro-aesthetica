@@ -89,20 +89,34 @@ export default function Contact() {
           </a>
         </div>
 
-        <div className="flex flex-col items-center justify-center bg-gray-100 dark:bg-transparent py-6">
+        <div className="flex flex-col items-center justify-center bg-gray-100 dark:bg-transparent pb-6">
           <div className="flex flex-col items-center justify-start w-full">
-            <PageTitle additionalClass="mb-4 w-full p-5" title="Contact Us" />
+            <PageTitle
+              additionalClass="mb-4 w-full p-5 text-center"
+              title="Contact Us"
+            />
 
             <div className="flex flex-col sm:flex-row items-start justify-center w-full">
               <div className="flex flex-col items-center justify-center mb-10 sm:mb-0 w-full sm:max-w-xs sm:w-1/2 md:max-w-lg">
                 <div className="flex flex-col items-center justify-center w-full p-5 md:p-0">
-                  <form className="flex flex-col items-center justify-center w-full md:px-5 lg:max-w-lg">
+                  <form className="flex flex-col items-center justify-center w-full md:px-5 lg:max-w-lg bg-transparent rounded-none shadow-transparent md:bg-white py-5 md:rounded-lg md:shadow-sm ">
                     <TextField
                       label="Your Name"
                       variant="outlined"
-                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                      className="border border-gray-300 rounded-md px-4 py-2 mb-5"
                       sx={{
                         mb: 2,
+                        '& .MuiOutlinedInput-root': {
+                          '&:hover fieldset': {
+                            borderColor: '#efd773',
+                          },
+                          '&.Mui-focused fieldset': {
+                            borderColor: '#efd773',
+                          },
+                        },
+                      }}
+                      InputLabelProps={{
+                        style: { color: '#5d6069' },
                       }}
                       fullWidth
                       inputMode="text"
@@ -120,6 +134,17 @@ export default function Contact() {
                       className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
                       sx={{
                         mb: 2,
+                        '& .MuiOutlinedInput-root': {
+                          '&:hover fieldset': {
+                            borderColor: '#efd773',
+                          },
+                          '&.Mui-focused fieldset': {
+                            borderColor: '#efd773',
+                          },
+                        },
+                      }}
+                      InputLabelProps={{
+                        style: { color: '#5d6069' },
                       }}
                       fullWidth
                       inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
@@ -138,6 +163,17 @@ export default function Contact() {
                       className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
                       sx={{
                         mb: 2,
+                        '& .MuiOutlinedInput-root': {
+                          '&:hover fieldset': {
+                            borderColor: '#efd773',
+                          },
+                          '&.Mui-focused fieldset': {
+                            borderColor: '#efd773',
+                          },
+                        },
+                      }}
+                      InputLabelProps={{
+                        style: { color: '#5d6069' },
                       }}
                       fullWidth
                       inputMode="email"
@@ -157,6 +193,17 @@ export default function Contact() {
                       className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
                       sx={{
                         mb: 2,
+                        '& .MuiOutlinedInput-root': {
+                          '&:hover fieldset': {
+                            borderColor: '#efd773',
+                          },
+                          '&.Mui-focused fieldset': {
+                            borderColor: '#efd773',
+                          },
+                        },
+                      }}
+                      InputLabelProps={{
+                        style: { color: '#5d6069' },
                       }}
                       placeholder="Email title"
                       fullWidth
@@ -171,11 +218,11 @@ export default function Contact() {
                     />
 
                     <textarea
-                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-transparent"
                       placeholder="Your Message"
                     />
                     {/* <div className="w-full text-right"> */}
-                    <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-30">
+                    <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-30 hover:bg-[#efd773] hover:text-black hover:font-semibold">
                       Send Message
                     </button>
                     {/* </div> */}

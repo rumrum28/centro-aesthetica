@@ -17,7 +17,7 @@ const HomeBody = () => {
   )
 
   return (
-    <section className="pt-11 max-w-7xl mx-auto w-full">
+    <section className="pt-11 max-w-6xl mx-auto w-full">
       <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
         <div className="flex flex-wrap items-center">
           <div className="w-full mx-auto px-4 md:w-4/5 lg:w-1/2">
@@ -55,7 +55,7 @@ const HomeBody = () => {
               <img
                 src="/images/body-1.jpg"
                 alt="about-image"
-                className="mx-auto w-full max-w-full lg:mr-0"
+                className="mx-auto w-full md:w-auto max-w-full lg:mr-0 h-auto md:h-[576px]"
               />
             </div>
           </div>

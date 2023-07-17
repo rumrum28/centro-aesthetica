@@ -4,6 +4,8 @@ import Footer from '../components/footer'
 import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown'
 import HomeBody from '../components/home/homeBody'
 import HomeBody2 from '../components/home/HomeBody2'
+import HeaderTitle from '../components/home/headerTitle'
+import HomeServices from '../components/home/homeServices'
 
 const videoSources = [
   { src: '/videos/Centro-Aesthetica-1080p.mp4' },
@@ -29,12 +31,10 @@ export default function Home() {
           placeholderImage="/images/cosmetic-massage.webp"
         />
 
-        <div className="relative z-10 flex justify-center items-center h-full">
-          <h1 className="hidden sm:block text-white text-2xl">
-            Welcome to Our Website
-          </h1>
+        <div className="relative z-10 flex justify-start items-start h-full max-w-8xl mx-auto">
+          <HeaderTitle />
 
-          <div className="absolute bottom-0 left-0 right-0 hidden sm:flex justify-center">
+          <div className="absolute bottom-0 right-0 hidden sm:flex justify-center">
             <div className="animate-bounce text-slate-300 hover:text-slate-50 pb-5 cursor-pointer">
               <ExpandCircleDownIcon sx={{ fontSize: 32 }} />
             </div>
@@ -43,6 +43,7 @@ export default function Home() {
       </div>
 
       <HomeBody />
+      <HomeServices />
       <HomeBody2 />
 
       <Footer />
