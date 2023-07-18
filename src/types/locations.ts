@@ -4,4 +4,6 @@ export type Location = {
   paragraph: string
   image: string
   tags: string[]
+  latitude: string
+  longitude: string
 }

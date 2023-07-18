@@ -8,6 +8,8 @@ const blogData: Location[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.',
     image: 'https://cdn.worlddata.info/maps/region/phl-metro-manila.png',
     tags: ['Click to zoom'],
+    latitude: '14.5909491',
+    longitude: '120.9806405',
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const blogData: Location[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.',
     image: 'https://cdn.worlddata.info/maps/region/phl-metro-manila.png',
     tags: ['Click to zoom'],
+    latitude: '14.5909491',
+    longitude: '120.9806405',
   },
   {
     id: 3,
@@ -24,6 +28,8 @@ const blogData: Location[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.',
     image: 'https://cdn.worlddata.info/maps/region/phl-metro-manila.png',
     tags: ['Click to zoom'],
+    latitude: '14.5909491',
+    longitude: '120.9806405',
   },
 ]
 export default blogData

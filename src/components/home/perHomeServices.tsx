@@ -9,7 +9,7 @@ type Props = {
 const PerHomeServices = ({ title, paragraph, image }: Props) => {
   return (
     <div className="w-full lg:px-0 rounded overflow-hidden">
-      <div className="flex items-center justify-center w-full h-16 md:40 bg-slate-50 dark:bg-slate-800 overflow-hidden">
+      <div className="flex items-center justify-center w-full h-16 md:h-40 bg-slate-50 dark:bg-slate-800 overflow-hidden">
         <img src={image} alt={title} />
       </div>
 

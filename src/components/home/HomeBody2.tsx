@@ -1,6 +1,6 @@
 const HomeBody2 = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28 max-w-6xl mx-auto">
+    <section className="py-5 max-w-6xl mx-auto">
       <div className="container">
         <div className="flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2 mx-auto">

@@ -17,8 +17,8 @@ const HomeBody = () => {
   )
 
   return (
-    <section className="pt-11 max-w-6xl mx-auto w-full">
-      <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+    <section className="py-5 max-w-6xl mx-auto w-full">
+      <div className="border-b border-body-color/[.15] pb-5 dark:border-white/[.15] md:pb-20 lg:pb-28">
         <div className="flex flex-wrap items-center">
           <div className="w-full mx-auto px-4 md:w-4/5 lg:w-1/2">
             <SectionTitle
