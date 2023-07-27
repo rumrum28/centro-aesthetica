@@ -17,10 +17,7 @@ export default function Locations() {
       <section className="py-9 max-w-6xl mx-auto">
         <div className="flex flex-wrap justify-center">
           {blogData.map((blog) => (
-            <div
-              key={blog.id}
-              className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-            >
+            <div key={blog.id} className="w-full px-4 md:w-1/3">
               <SingleLocations blog={blog} />
             </div>
           ))}

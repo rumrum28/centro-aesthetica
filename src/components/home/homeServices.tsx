@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SectionTitle from './SectionTitle'
 import PerHomeServices from './perHomeServices'
 
@@ -9,26 +10,29 @@ const HomeServices = () => {
 
         <div className="flex justify-around items-start gap-2">
           <PerHomeServices
-            title="Primary Care Services"
-            paragraph="Receive comprehensive medical care from our experienced doctors and nurses. We provide regular check-ups, diagnostic services and treatment for any illness."
-            image="https://images.unsplash.com/photo-1613377512507-92803ec4ef17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwxMHx8bWVkaWNhbCUyMGNsaW5pY3xlbnwwfHx8fDE2ODk1NzE2ODh8MA&ixlib=rb-4.0.3&q=80&w=1080"
+            title="Anti Acne Facial"
+            paragraph="An anti-acne facial is a specialized skincare treatment designed to combat and reduce acne breakouts."
+            image="/images/body-2.jpg"
           />
           <PerHomeServices
-            title="Specialized Clinics"
-            paragraph="Get specialized care from our expert doctors for your specific health needs. We offer clinics for dermatology, gynecology, and more."
-            image="https://images.unsplash.com/photo-1578307985320-34b61a66c195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyMXx8bWVkaWNhbCUyMGNsaW5pY3xlbnwwfHx8fDE2ODk1NzE2ODh8MA&ixlib=rb-4.0.3&q=80&w=1080"
+            title="Anti Aging Facial"
+            paragraph="The focus of this facial is to target common skin concerns associated with aging, such as fine lines, wrinkles, loss of elasticity, and uneven skin tone."
+            image="/images/body-2.jpg"
           />
           <PerHomeServices
-            title="Emergency Care"
-            paragraph="Our clinic is equipped to handle emergencies. We provide life-saving medical care to patients who require immediate attention."
-            image="https://images.unsplash.com/photo-1580281657702-257584239a55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyN3x8bWVkaWNhbCUyMGNsaW5pY3xlbnwwfHx8fDE2ODk1NzE2ODh8MA&ixlib=rb-4.0.3&q=80&w=1080"
+            title="Brightening Facial"
+            paragraph="This facial targets dull, uneven skin tone, dark spots, and pigmentation issues, aiming to promote a brighter and more glowing complexion."
+            image="/images/body-2.jpg"
           />
         </div>
 
         <div className="w-full flex justify-center pt-10">
-          <button className="bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-50 px-8 py-3 rounded-md font-medium hover:bg-slate-100 dark:hover:bg-slate-700 transition duration-200">
-            View All Services
-          </button>
+          <Link
+            to="/book-services"
+            className="bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-50 px-8 py-3 rounded-md font-medium hover:bg-slate-100 dark:hover:bg-slate-700 transition duration-200"
+          >
+            See More ...
+          </Link>
         </div>
       </div>
     </section>

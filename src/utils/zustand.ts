@@ -6,6 +6,17 @@ type UserState = {
   name: string
   email: string
 }
+type BookingStateTags = String[]
+type BookingState = {
+  id: number
+  title: string
+  price: number
+  tags?: BookingStateTags
+  image: string
+  date?: string
+  duration: number
+  dateSelected?: string | null
+}
 type Session = {
   token: string
   user: UserState
@@ -18,7 +29,9 @@ type LoginUserState = {
 type Zustand = {
   logout: () => void
   user: LoginUserState | null
+  bookings: BookingState | null
   isLoggingIn: (session: Session) => void
+  addBooking: (id: BookingState) => void
   snackbar: {
     status: boolean
     message: string
@@ -31,6 +44,7 @@ type Zustand = {
 const pucspispfjsf = (set: any) =>
   ({
     user: null,
+    bookings: null,
     isLoggingIn: (session: Session) => {
       if (session.token) {
         Cookies.set('user_session', session.token)
@@ -40,6 +54,11 @@ const pucspispfjsf = (set: any) =>
           name: session.user.name,
           email: session.user.email,
         },
+      }))
+    },
+    addBooking: (data: BookingState) => {
+      set(() => ({
+        bookings: data,
       }))
     },
     snackbar: {

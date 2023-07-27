@@ -1,3 +1,5 @@
+import { Dayjs } from 'dayjs'
+
 type Tags = {
   id: number
   title: string
@@ -7,6 +9,7 @@ type Tags = {
   description?: string | null
   image?: string | null
   duration: number
+  dateSelected?: string | null
 }
 
 export type Services = Tags[]

@@ -6,10 +6,10 @@
 
 body {
   min-width: 360px;
-  color: #272727;
+  /* color: #272727; */
   font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
+  /* font-weight: 400; */
+  /* letter-spacing: 0; */
 }
 
 .gold {

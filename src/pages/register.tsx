@@ -1,10 +1,12 @@
-import { TextField } from '@mui/material'
+import { Box, TextField } from '@mui/material'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
 import NavSignIn from '../components/navSignin'
 import LoginChecker from '../components/loginChecker'
 import useZustand from '../utils/zustand'
+import CopyRight from '../components/footer/copyright'
+import { LoadingButton } from '@mui/lab'
 
 export default function Register() {
   const { setSnackbar, isLoggingIn } = useZustand((state) => ({
@@ -39,42 +41,40 @@ export default function Register() {
     e.preventDefault()
     setIsLoading(true)
     let hasNumber = false,
-      hasUpper = false,
       hasLower = false,
       passwordSame = false
 
     if (!firstName) {
+      setIsLoading(false)
       return setSnackbar(true, 'Please enter your first name')
     }
 
     if (!lastName) {
+      setIsLoading(false)
       return setSnackbar(true, 'Please enter your last name')
     }
 
     if (!checkEmail(email)) {
-      setEmailChecker('Invalid email')
-      return null
+      setIsLoading(false)
+      return setEmailChecker('Invalid email')
     }
     setEmailChecker('')
 
     if (!checkPassword(password)) {
-      setPasswordChecker('Password must be at least 5 characters')
-      return null
+      setIsLoading(false)
+      return setPasswordChecker('Password must be at least 5 characters')
     }
     setPasswordChecker('')
     if (/\d/.test(password)) {
       hasNumber = true
     } else {
+      setIsLoading(false)
       return setPasswordChecker('Must contain at least 1 number')
-    }
-    if (/[A-Z]/.test(password)) {
-      hasUpper = true
-    } else {
-      return setPasswordChecker('Must contain at least 1 uppercase letter')
     }
     if (/[a-z]/.test(password)) {
       hasLower = true
     } else {
+      setIsLoading(false)
       return setPasswordChecker('Must contain at least 1 lowercase letter')
     }
 
@@ -84,9 +84,11 @@ export default function Register() {
       if (password === passwordRetype) {
         passwordSame = true
       } else {
+        setIsLoading(false)
         return setPasswordRetypeChecker("Passwords don't match")
       }
     } else {
+      setIsLoading(false)
       return setPasswordRetypeChecker("Password fields can't be empty")
     }
     setPasswordRetypeChecker('')
@@ -108,7 +110,7 @@ export default function Register() {
       data: data,
     }
 
-    if (hasNumber && hasUpper && hasLower && passwordSame) {
+    if (hasNumber && hasLower && passwordSame) {
       try {
         await axios.request(config).then((response) => {
           if (response.data?.token) isLoggingIn(response.data)
@@ -141,11 +143,18 @@ export default function Register() {
 
         <div className="bg-white w-full md:max-w-sm md:mx-auto h-[calc(100vh-64px)] px-6 flex items-center justify-center">
           <div className="w-full h-100">
-            <div className="flex items-center">
-              <div className="text-2xl font-bold">logo-here</div>
-            </div>
+            <Link
+              to="/"
+              className="flex items-center text-xl font-bold font-serif tracking-tight bg-[#ceb700] dark:bg-logo whitespace-nowrap"
+              style={{
+                color: 'transparent',
+                WebkitBackgroundClip: 'text',
+              }}
+            >
+              CENTRO AESTHETICA
+            </Link>
 
-            <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12 gold__text">
+            <h1 className="text-xl md:text-base font-bold leading-tight mt-2">
               Create an account
             </h1>
 
@@ -205,12 +214,16 @@ export default function Register() {
                 />
               </div>
 
-              <button
-                type="submit"
-                className="w-full uppercase block gold text-white font-semibold rounded-lg px-4 py-3 mt-6"
-              >
-                Sign Up
-              </button>
+              <Box sx={{ marginTop: 2 }}>
+                <LoadingButton
+                  type="submit"
+                  loading={isLoading}
+                  variant="contained"
+                  className="w-full uppercase block gold text-white"
+                >
+                  <span>Sign Up</span>
+                </LoadingButton>
+              </Box>
             </form>
 
             <p className="mt-8 text-center">
@@ -223,9 +236,7 @@ export default function Register() {
               </Link>
             </p>
 
-            <p className="text-sm text-gray-500 mt-12 text-center">
-              &copy; 2023 CentroAesthetica - All Rights Reserved.
-            </p>
+            <CopyRight />
           </div>
         </div>
       </section>

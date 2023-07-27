@@ -92,184 +92,150 @@ export default function Contact() {
         <div className="flex flex-col items-center justify-center bg-gray-100 dark:bg-transparent pb-6">
           <div className="flex flex-col items-center justify-start w-full">
             <PageTitle
-              additionalClass="mb-4 w-full p-5 text-center"
+              additionalClass="w-full p-5 text-center"
               title="Contact Us"
             />
 
-            <div className="flex flex-col sm:flex-row items-start justify-center w-full">
-              <div className="flex flex-col items-center justify-center mb-10 sm:mb-0 w-full sm:max-w-xs sm:w-1/2 md:max-w-lg">
-                <div className="flex flex-col items-center justify-center w-full p-5 md:p-0">
-                  <form className="flex flex-col items-center justify-center w-full md:px-5 lg:max-w-lg bg-transparent rounded-none shadow-transparent md:bg-white py-5 md:rounded-lg md:shadow-sm ">
-                    <TextField
-                      label="Your Name"
-                      variant="outlined"
-                      className="border border-gray-300 rounded-md px-4 py-2 mb-5"
-                      sx={{
-                        mb: 2,
-                        '& .MuiOutlinedInput-root': {
-                          '&:hover fieldset': {
-                            borderColor: '#efd773',
-                          },
-                          '&.Mui-focused fieldset': {
-                            borderColor: '#efd773',
-                          },
-                        },
-                      }}
-                      InputLabelProps={{
-                        style: { color: '#5d6069' },
-                      }}
-                      fullWidth
-                      inputMode="text"
-                      InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <PersonIcon />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
-                    <TextField
-                      label="Phone Number"
-                      variant="outlined"
-                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
-                      sx={{
-                        mb: 2,
-                        '& .MuiOutlinedInput-root': {
-                          '&:hover fieldset': {
-                            borderColor: '#efd773',
-                          },
-                          '&.Mui-focused fieldset': {
-                            borderColor: '#efd773',
-                          },
-                        },
-                      }}
-                      InputLabelProps={{
-                        style: { color: '#5d6069' },
-                      }}
-                      fullWidth
-                      inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                      InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <PhoneAndroidIcon />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
-
-                    <TextField
-                      label="Your Email"
-                      variant="outlined"
-                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
-                      sx={{
-                        mb: 2,
-                        '& .MuiOutlinedInput-root': {
-                          '&:hover fieldset': {
-                            borderColor: '#efd773',
-                          },
-                          '&.Mui-focused fieldset': {
-                            borderColor: '#efd773',
-                          },
-                        },
-                      }}
-                      InputLabelProps={{
-                        style: { color: '#5d6069' },
-                      }}
-                      fullWidth
-                      inputMode="email"
-                      type="email"
-                      InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <AttachEmailIcon />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
-
-                    <TextField
-                      label="Subject"
-                      variant="outlined"
-                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
-                      sx={{
-                        mb: 2,
-                        '& .MuiOutlinedInput-root': {
-                          '&:hover fieldset': {
-                            borderColor: '#efd773',
-                          },
-                          '&.Mui-focused fieldset': {
-                            borderColor: '#efd773',
-                          },
-                        },
-                      }}
-                      InputLabelProps={{
-                        style: { color: '#5d6069' },
-                      }}
-                      placeholder="Email title"
-                      fullWidth
-                      inputMode="text"
-                      InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <SubjectIcon />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
-
-                    <textarea
-                      className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-transparent"
-                      placeholder="Your Message"
-                    />
-                    {/* <div className="w-full text-right"> */}
-                    <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-30 hover:bg-[#efd773] hover:text-black hover:font-semibold">
-                      Send Message
-                    </button>
-                    {/* </div> */}
-                  </form>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-start justify-around sm:ml-5 md:ml-0 md:w-1/2 w-full md:p-5">
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center mb-10 sm:mb-4 md:min-h-[80px] w-full sm:w-auto">
-                  <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
-                    <BusinessIcon
-                      sx={{ color: 'white', height: 28, width: 28, m: 2 }}
-                    />
-                  </div>
-                  <div className="sm:ml-4 text-center sm:text-left">
-                    <PageTitle title="Our Locations" additionalClass="mb-2" />
-                    <ul className="text-sm ml-4">
-                      <li className="text-gray-600">
-                        - 123 Street, City, Country.
-                      </li>
-                      <li className="text-gray-600">
-                        - Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Fuga unde veritatis aut eum nemo error nisi itaque
-                        illum ut autem atque doloremque illo harum quasi,
-                        molestias explicabo numquam cum.
-                      </li>
-                      <li className="text-gray-600">
-                        - Lorem ipsum dolor sit amet consectetur.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center mb-10 sm:mb-4 md:h-36 w-full sm:w-auto">
-                  <div className="flex items-center justify-center bg-gray-800 rounded-full mb-5 xm:mb-0">
-                    <ContactPhoneIcon
-                      sx={{ color: 'white', height: 28, width: 28, m: 2 }}
-                    />
-                  </div>
-                  <div className="sm:ml-4 text-center sm:text-left">
-                    <PageTitle title="Contact Number" additionalClass="mb-2" />
-                    <p className="text-gray-600">09088188140</p>
-                    <p className="text-gray-600">09088188141</p>
-                  </div>
-                </div>
+            <div className="flex w-full justify-center items-start pb-5">
+              <ContactPhoneIcon
+                sx={{ color: 'black', height: 18, width: 18 }}
+                className="my-1 mx-2"
+              />
+              <div className="flex flex-col justify-start items-start">
+                <p className="text-slate-500 font-bold">Phone Numbers</p>
+                <p className="text-gray-600 font-semibold">09088188140</p>
+                <p className="text-gray-600 font-semibold">09088188141</p>
               </div>
             </div>
+
+            <form className="flex mx-auto flex-col items-center justify-center w-full md:px-5 lg:max-w-lg bg-transparent rounded-none shadow-transparent md:bg-white py-5 md:rounded-lg md:shadow-sm ">
+              <TextField
+                label="Your Name"
+                variant="outlined"
+                className="border border-gray-300 rounded-md px-4 py-2 mb-5"
+                sx={{
+                  mb: 2,
+                  '& .MuiOutlinedInput-root': {
+                    '&:hover fieldset': {
+                      borderColor: '#efd773',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#efd773',
+                    },
+                  },
+                }}
+                InputLabelProps={{
+                  style: { color: '#5d6069' },
+                }}
+                fullWidth
+                inputMode="text"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PersonIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <TextField
+                label="Phone Number"
+                variant="outlined"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                sx={{
+                  mb: 2,
+                  '& .MuiOutlinedInput-root': {
+                    '&:hover fieldset': {
+                      borderColor: '#efd773',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#efd773',
+                    },
+                  },
+                }}
+                InputLabelProps={{
+                  style: { color: '#5d6069' },
+                }}
+                fullWidth
+                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PhoneAndroidIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+
+              <TextField
+                label="Your Email"
+                variant="outlined"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                sx={{
+                  mb: 2,
+                  '& .MuiOutlinedInput-root': {
+                    '&:hover fieldset': {
+                      borderColor: '#efd773',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#efd773',
+                    },
+                  },
+                }}
+                InputLabelProps={{
+                  style: { color: '#5d6069' },
+                }}
+                fullWidth
+                inputMode="email"
+                type="email"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <AttachEmailIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+
+              <TextField
+                label="Subject"
+                variant="outlined"
+                className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5"
+                sx={{
+                  mb: 2,
+                  '& .MuiOutlinedInput-root': {
+                    '&:hover fieldset': {
+                      borderColor: '#efd773',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#efd773',
+                    },
+                  },
+                }}
+                InputLabelProps={{
+                  style: { color: '#5d6069' },
+                }}
+                placeholder="Email title"
+                fullWidth
+                inputMode="text"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SubjectIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+
+              <textarea
+                className="border border-gray-300 rounded-md px-4 py-2 w-full mb-5 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:border-transparent"
+                placeholder="Your Message"
+              />
+              {/* <div className="w-full text-right"> */}
+              <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-30 hover:bg-[#efd773] hover:text-black hover:font-semibold">
+                Send Message
+              </button>
+              {/* </div> */}
+            </form>
           </div>
         </div>
       </div>

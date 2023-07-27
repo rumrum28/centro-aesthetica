@@ -103,11 +103,18 @@ export default function Login({ display }: { display: string }) {
           } h-[calc(100vh-64px)] px-6 lg:px-8 flex items-center justify-center`}
         >
           <div className="w-full h-100">
-            <div className="flex items-center">
-              <div className="text-2xl font-bold">logo-here</div>
-            </div>
+            <Link
+              to="/"
+              className="flex items-center text-xl font-bold font-serif tracking-tight bg-[#ceb700] dark:bg-logo whitespace-nowrap"
+              style={{
+                color: 'transparent',
+                WebkitBackgroundClip: 'text',
+              }}
+            >
+              CENTRO AESTHETICA
+            </Link>
 
-            <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12 gold__text">
+            <h1 className="text-xl md:text-base font-bold leading-tight mt-2">
               Log in to your account
             </h1>
 

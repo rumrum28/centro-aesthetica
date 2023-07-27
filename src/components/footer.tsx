@@ -1,8 +1,5 @@
-import InstagramIcon from '@mui/icons-material/Instagram'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import YouTubeIcon from '@mui/icons-material/YouTube'
 import { Link } from 'react-router-dom'
+import FollowUsIcons from './followUsIcons'
 
 const Footer = () => {
   return (
@@ -76,30 +73,7 @@ const Footer = () => {
                 Follow Us
               </div>
               <div className="flex pl-4 justify-start mt-2">
-                <a
-                  className="flex items-center text-gray-500 hover:text-[#57480e] dark:hover:text-white mr-3 no-underline"
-                  href="#"
-                >
-                  <FacebookIcon />
-                </a>
-                <a
-                  className="flex items-center text-gray-500 hover:text-[#57480e] dark:hover:text-white mr-3 no-underline"
-                  href="#"
-                >
-                  <TwitterIcon />
-                </a>
-                <a
-                  className="flex items-center text-gray-500 hover:text-[#57480e] dark:hover:text-white mr-3 no-underline"
-                  href="#"
-                >
-                  <InstagramIcon />
-                </a>
-                <a
-                  className="flex items-center text-gray-500 hover:text-[#57480e] dark:hover:text-white no-underline"
-                  href="#"
-                >
-                  <YouTubeIcon />
-                </a>
+                <FollowUsIcons />
               </div>
             </div>
           </div>
@@ -110,8 +84,8 @@ const Footer = () => {
 
       <div className="max-w-6xl mx-auto">
         <div className="pt-6 text-gray-600 flex flex-col md:flex-row justify-center items-center">
-          <div>© 2023 Centro Aesthetica</div>
-          <div>&nbsp;All rights reserved.</div>
+          <div>&copy; 2023 Centro Aesthetica</div>
+          <div>&nbsp;-&nbsp;All rights reserved.</div>
         </div>
       </div>
     </footer>
