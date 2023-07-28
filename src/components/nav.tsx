@@ -19,11 +19,11 @@ function HideOnScroll({ children }: any) {
 
 export default function Nav() {
   return (
-    <>
+    <div className="bg-white">
       <CssBaseline />
       {/* <HideOnScroll> */}
-      <AppBar>
-        <nav className="bg-header-pattern dark:bg-header-patterndark duration-100 ">
+      <AppBar sx={{ backgroundColor: 'white' }}>
+        <nav className="bg-header-pattern dark:bg-header-patterndark duration-100">
           <div className="max-w-6xl mx-auto px-2">
             <div className="flex items-center justify-between h-24 pl-2">
               <div className="flex-shrink-0 cursor-pointer">
@@ -54,6 +54,6 @@ export default function Nav() {
         </nav>
       </AppBar>
       {/* </HideOnScroll> */}
-    </>
+    </div>
   )
 }

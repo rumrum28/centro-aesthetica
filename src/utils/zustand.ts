@@ -1,21 +1,11 @@
 import Cookies from 'js-cookie'
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { Tags } from '../types/services'
 
 type UserState = {
   name: string
   email: string
-}
-type BookingStateTags = String[]
-type BookingState = {
-  id: number
-  title: string
-  price: number
-  tags?: BookingStateTags
-  image: string
-  date?: string
-  duration: number
-  dateSelected?: string | null
 }
 type Session = {
   token: string
@@ -29,9 +19,9 @@ type LoginUserState = {
 type Zustand = {
   logout: () => void
   user: LoginUserState | null
-  bookings: BookingState | null
+  bookings: Tags | []
   isLoggingIn: (session: Session) => void
-  addBooking: (id: BookingState) => void
+  addBooking: (id: Tags) => void
   snackbar: {
     status: boolean
     message: string
@@ -44,7 +34,7 @@ type Zustand = {
 const pucspispfjsf = (set: any) =>
   ({
     user: null,
-    bookings: null,
+    bookings: [],
     isLoggingIn: (session: Session) => {
       if (session.token) {
         Cookies.set('user_session', session.token)
@@ -56,9 +46,9 @@ const pucspispfjsf = (set: any) =>
         },
       }))
     },
-    addBooking: (data: BookingState) => {
-      set(() => ({
-        bookings: data,
+    addBooking: (data: Tags) => {
+      set((state: any) => ({
+        bookings: [...state.bookings, data],
       }))
     },
     snackbar: {
@@ -83,7 +73,7 @@ const pucspispfjsf = (set: any) =>
 
 const useZustand = create(
   persist(pucspispfjsf, {
-    name: 'ca-frontend',
+    name: 'ca',
   })
 )
 

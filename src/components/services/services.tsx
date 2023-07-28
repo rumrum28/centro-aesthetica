@@ -21,7 +21,7 @@ const SingleService = ({ product }: { product: Props }) => {
         alt="Sunset in the mountains"
       />
       <div className="px-4 pt-4 flex-1">
-        <div className="font-bold text-xl dark:text-darkgold">
+        <div className="text-primary font-bold text-xl dark:text-darkgold">
           {product.title}
         </div>
       </div>
