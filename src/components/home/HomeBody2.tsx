@@ -1,3 +1,5 @@
+import banner from '/images/login-banner.jpg'
+
 const HomeBody2 = () => {
   return (
     <section className="py-5 max-w-6xl mx-auto">
@@ -8,7 +10,7 @@ const HomeBody2 = () => {
               className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <img src="/images/login-banner.jpg" alt="about image" />
+              <img src={banner} alt="about image" />
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">

@@ -7,6 +7,7 @@ import LoginChecker from '../components/loginChecker'
 import useZustand from '../utils/zustand'
 import CopyRight from '../components/footer/copyright'
 import { LoadingButton } from '@mui/lab'
+import loginBanner from '/images/login-banner.jpg'
 
 export default function Register() {
   const { setSnackbar, isLoggingIn } = useZustand((state) => ({
@@ -125,7 +126,7 @@ export default function Register() {
       <section className="flex flex-col md:flex-row h-[calc(100vh-64px)] mt-[64px]">
         <div className="hidden lg:block w-80 md:w-5/6 h-[calc(100vh-64px)]">
           <img
-            src="/images/login-banner.jpg"
+            src={loginBanner}
             alt=""
             className="w-full h-full object-cover"
           />

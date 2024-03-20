@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import FollowUsIcons from './followUsIcons'
+import lnbsvg from '/svg/logo-no-background.svg'
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
             }}
           >
             <img
-              src="/svg/logo-no-background.svg"
+              src={lnbsvg}
               alt="logo"
               width={200}
               height={200}

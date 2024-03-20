@@ -6,14 +6,21 @@ import HomeBody from '../components/home/homeBody'
 import HomeBody2 from '../components/home/HomeBody2'
 import HeaderTitle from '../components/home/headerTitle'
 import HomeServices from '../components/home/homeServices'
+import cosmeticMassage from '/images/cosmetic-massage.webp'
+import v1080 from '/videos/Centro-Aesthetica-1080p.mp4'
+import v720 from '/videos/Centro-Aesthetica-720p.mp4'
+import v576 from '/videos/Centro-Aesthetica-576p.mp4'
+import v480 from '/videos/Centro-Aesthetica-480p.mp4'
+import v460 from '/videos/Centro-Aesthetica-460p.mp4'
+import v360 from '/videos/Centro-Aesthetica-360p.mp4'
 
 const videoSources = [
-  { src: '/videos/Centro-Aesthetica-1080p.mp4' },
-  { src: '/videos/Centro-Aesthetica-720p.mp4' },
-  { src: '/videos/Centro-Aesthetica-576p.mp4' },
-  { src: '/videos/Centro-Aesthetica-480p.mp4' },
-  { src: '/videos/Centro-Aesthetica-460p.mp4' },
-  { src: '/videos/Centro-Aesthetica-360p.mp4' },
+  { src: v1080 },
+  { src: v720 },
+  { src: v576 },
+  { src: v480 },
+  { src: v460 },
+  { src: v360 },
 ]
 
 export default function Home() {
@@ -28,7 +35,7 @@ export default function Home() {
       >
         <BackgroundVideo
           videoSources={videoSources}
-          placeholderImage="/images/cosmetic-massage.webp"
+          placeholderImage={cosmeticMassage}
         />
 
         <div className="relative z-10 flex justify-start items-start h-full max-w-8xl mx-auto">

@@ -1,4 +1,5 @@
 import SectionTitle from './SectionTitle'
+import body1 from '/images/body-1.jpg'
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -53,7 +54,7 @@ const HomeBody = () => {
               data-wow-delay=".2s"
             >
               <img
-                src="/images/body-1.jpg"
+                src={body1}
                 alt="about-image"
                 className="mx-auto w-full md:w-auto max-w-full lg:mr-0 h-auto md:h-[576px]"
               />

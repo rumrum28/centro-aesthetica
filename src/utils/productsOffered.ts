@@ -1,4 +1,20 @@
 import { Services } from '../types/services'
+import aaf1 from '/images/anti-acne-facial.jpg'
+import aaf2 from '/images/anti-acne-facial.jpg'
+import aaf3 from '/images/anti-aging-facial.jpg'
+import aaf4 from '/images/anti-aging-facial.jpg'
+import bf1 from '/images/brightening-facial.jpg'
+import bf2 from '/images/brightening-facial.jpg'
+import rf1 from '/images/regular-facial.jpg'
+import rf2 from '/images/regular-facial.jpg'
+import cf1 from '/images/classic-facial.jpg'
+import cf2 from '/images/classic-facial.jpg'
+import hf1 from '/images/hydra-facial.jpg'
+import hf2 from '/images/hydra-facial.jpg'
+import atp1 from '/images/acne-therapy-package.jpg'
+import atp2 from '/images/acne-therapy-package.jpg'
+import cfwdp1 from '/images/complete-facial-with-diamond-peel.jpg'
+import cfwdp2 from '/images/complete-facial-with-diamond-peel.jpg'
 
 export const ServicesOffered: Services = [
   {
@@ -14,7 +30,7 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/anti-acne-facial.jpg', '/images/anti-acne-facial.jpg'],
+    image: [aaf1, aaf2],
     duration: 60,
     type: 'facial',
     description:
@@ -33,7 +49,7 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/anti-aging-facial.jpg', '/images/anti-aging-facial.jpg'],
+    image: [aaf3, aaf4],
     duration: 60,
     type: 'facial',
     description:
@@ -52,7 +68,7 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/brightening-facial.jpg', '/images/brightening-facial.jpg'],
+    image: [bf1, bf2],
     duration: 60,
     type: 'facial',
     description:
@@ -70,7 +86,7 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'moisturizing cream / sunblock',
     ],
-    image: ['/images/regular-facial.jpg', '/images/regular-facial.jpg'],
+    image: [rf1, rf2],
     duration: 60,
     type: 'facial',
     description:
@@ -87,7 +103,7 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/classic-facial.jpg', '/images/classic-facial.jpg'],
+    image: [cf1, cf2],
     duration: 60,
     type: 'facial',
     description:
@@ -105,7 +121,7 @@ export const ServicesOffered: Services = [
       'help improve overall skin texture',
       'tone and apperance',
     ],
-    image: ['/images/hydra-facial.jpg', '/images/hydra-facial.jpg'],
+    image: [hf1, hf2],
     duration: 60,
     type: 'facial',
   },
@@ -116,10 +132,7 @@ export const ServicesOffered: Services = [
     packagePrice: 5000,
     description:
       'Package 4 + 1 sessions. With free Acne set cosmetics. Complete set of acne treatment. Comes with free 1 session of RF slimming. Promo until December 31, 2021.',
-    image: [
-      '/images/acne-therapy-package.jpg',
-      '/images/acne-therapy-package.jpg',
-    ],
+    image: [atp1, atp2],
     duration: 60,
     type: 'facial',
   },
@@ -131,10 +144,7 @@ export const ServicesOffered: Services = [
       'mechanical exfoliation that removes excess oil',
       'dirt and dead cells on the surface of the skin to reveal younger brighter skin',
     ],
-    image: [
-      '/images/complete-facial-with-diamond-peel.jpg',
-      '/images/complete-facial-with-diamond-peel.jpg',
-    ],
+    image: [cfwdp1, cfwdp2],
     duration: 60,
     type: 'facial',
     description:

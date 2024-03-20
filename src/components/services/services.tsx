@@ -1,6 +1,7 @@
 import { Button, CardActions, IconButton, Typography } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import { useNavigate } from 'react-router-dom'
+import noImage from '/images/no-image.jpg'
 
 type Props = {
   id: number
@@ -18,7 +19,7 @@ const SingleService = ({ product }: { product: Props }) => {
       <div
         className="w-full h-[180px] bg-center bg-no-repeat bg-cover"
         style={{
-          backgroundImage: `url(${product.image[0] || '/images/no-image.jpg'})`,
+          backgroundImage: `url(${product.image[0] || noImage})`,
         }}
       />
       <div className="px-4 pt-4 flex-1">

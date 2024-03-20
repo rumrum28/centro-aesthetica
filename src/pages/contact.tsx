@@ -7,6 +7,7 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import SubjectIcon from '@mui/icons-material/Subject'
 import { TextField, InputAdornment } from '@mui/material'
 import PageTitle from '../components/pageTitle'
+import rubyRocesBW from '/images/ruby-roces-bw.jpg'
 
 export default function Contact() {
   const handleSubmit = (event: any) => {
@@ -20,12 +21,7 @@ export default function Contact() {
         <div className="container mx-auto dark:border-gray-800">
           <div className="flex flex-wrap py-8 flex-col sm:flex-row p-5">
             <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 m-auto sm:m-0">
-              <img
-                src="/images/ruby-roces-bw.jpg"
-                alt="ceo"
-                width={128}
-                height={128}
-              />
+              <img src={rubyRocesBW} alt="ceo" width={128} height={128} />
             </div>
             <div className="sm:pl-10 sm:pt-4 flex-1">
               <div className="flex sm:justify-between sm:flex-row sm:flex-no-wrap justify-center flex-wrap mb-6">
