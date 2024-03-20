@@ -19,18 +19,33 @@ function App() {
   return (
     <div className="font-quicksand bg-[#e7ebf0] dark:bg-slate-900">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login display="full-login" />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/book-services" element={<Services />} />
-        <Route path="/book-services/service" element={<SoloService />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/our-locations" element={<Locations />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/centro-aesthetica/" element={<Home />} />
+        <Route path="/centro-aesthetica/about" element={<About />} />
+        <Route
+          path="/centro-aesthetica/login"
+          element={<Login display="full-login" />}
+        />
+        <Route path="/centro-aesthetica/register" element={<Register />} />
+        <Route path="/centro-aesthetica/book-services" element={<Services />} />
+        <Route
+          path="/centro-aesthetica/book-services/service"
+          element={<SoloService />}
+        />
+        <Route path="/centro-aesthetica/contact" element={<Contact />} />
+        <Route path="/centro-aesthetica/faq" element={<Faq />} />
+        <Route
+          path="/centro-aesthetica/our-locations"
+          element={<Locations />}
+        />
+        <Route
+          path="/centro-aesthetica/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          path="/centro-aesthetica/terms-and-conditions"
+          element={<TermsAndConditions />}
+        />
+        <Route path="/centro-aesthetica/cart" element={<Cart />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
 

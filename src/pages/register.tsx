@@ -135,7 +135,7 @@ export default function Register() {
         <div className="bg-white w-full md:max-w-sm md:mx-auto h-[calc(100vh-64px)] px-6 flex items-center justify-center">
           <div className="w-full h-100">
             <Link
-              to="/"
+              to="/centro-aesthetica/"
               className="flex items-center text-xl font-bold font-serif tracking-tight bg-[#ceb700] dark:bg-logo whitespace-nowrap"
               style={{
                 color: 'transparent',
@@ -220,7 +220,7 @@ export default function Register() {
             <p className="mt-8 text-center">
               Already have an account?{' '}
               <Link
-                to="/login"
+                to="/centro-aesthetica/login"
                 className="gold__text font-medium text-lg hover:font-bold"
               >
                 Sign In

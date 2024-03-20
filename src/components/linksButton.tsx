@@ -11,7 +11,7 @@ export default function LinksButton() {
   return (
     <>
       <Link
-        to="/"
+        to="/centro-aesthetica/"
         className="text-gray-800 hover:bg-gray-100 hover:text-[#887631] dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
       >
         Home
@@ -22,7 +22,7 @@ export default function LinksButton() {
         badgeContent={bookings && bookings.length}
       >
         <Link
-          to="/book-services"
+          to="/centro-aesthetica/book-services"
           className="text-gray-800 hover:bg-gray-100 hover:text-[#887631] dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
         >
           Book Services
@@ -30,13 +30,13 @@ export default function LinksButton() {
       </Badge>
 
       <Link
-        to="/our-locations"
+        to="/centro-aesthetica/our-locations"
         className="text-gray-800 hover:bg-gray-100 hover:text-[#887631] dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
       >
         Our Locations
       </Link>
       <Link
-        to="/contact"
+        to="/centro-aesthetica/contact"
         className="text-gray-800 hover:bg-gray-100 hover:text-[#887631] dark:hover:bg-gray-700 darkhover:text-white px-3 py-2 rounded-md text-sm font-medium dark:text-white"
       >
         Contact Us

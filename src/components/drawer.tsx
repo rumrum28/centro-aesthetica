@@ -63,7 +63,7 @@ const DrawerComponent = () => {
     {
       name: 'Home',
       logo: dark ? <HomeOutlinedIcon /> : <HomeIcon />,
-      link: '/',
+      link: '/centro-aesthetica/',
     },
     {
       name: 'Book Appointment',
@@ -76,44 +76,44 @@ const DrawerComponent = () => {
           <BookmarkAddIcon />
         </Badge>
       ),
-      link: '/book-services',
+      link: '/centro-aesthetica/book-services',
     },
     {
       name: 'Our Location',
       logo: dark ? <LocationOnOutlinedIcon /> : <LocationOnIcon />,
-      link: '/our-locations',
+      link: '/centro-aesthetica/our-locations',
     },
     // {
     //   name: 'Our Services',
     //   logo: dark ? <EngineeringOutlinedIcon /> : <EngineeringIcon />,
-    //   link: '/services',
+    //   link: '/centro-aesthetica/services',
     // },
     {
       name: 'Contact Us',
       logo: dark ? <ContactPhoneOutlinedIcon /> : <ContactPhoneIcon />,
-      link: '/contact',
+      link: '/centro-aesthetica/contact',
     },
   ]
   const list2 = [
     {
       name: 'About Us',
       logo: dark ? <InfoOutlinedIcon /> : <InfoIcon />,
-      link: '/about',
+      link: '/centro-aesthetica/about',
     },
     {
       name: 'FAQ',
       logo: dark ? <LiveHelpOutlinedIcon /> : <LiveHelpIcon />,
-      link: '/faq',
+      link: '/centro-aesthetica/faq',
     },
     {
       name: 'Terms & Conditions',
       logo: <GavelIcon />,
-      link: '/terms-and-conditions',
+      link: '/centro-aesthetica/terms-and-conditions',
     },
     {
       name: 'Privacy Policy',
       logo: dark ? <PrivacyTipOutlinedIcon /> : <PrivacyTipIcon />,
-      link: '/privacy-policy',
+      link: '/centro-aesthetica/privacy-policy',
     },
   ]
 

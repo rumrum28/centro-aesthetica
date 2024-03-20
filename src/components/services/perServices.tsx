@@ -93,7 +93,7 @@ export default function PerServices() {
             sx={{
               bgcolor: 'white',
             }}
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/centro-aesthetica/')}
           >
             <HomeIcon
               sx={{
@@ -107,7 +107,7 @@ export default function PerServices() {
           sx={{
             bgcolor: 'white',
           }}
-          onClick={() => navigate('/cart')}
+          onClick={() => navigate('/centro-aesthetica/cart')}
         >
           <Badge
             color="error"
@@ -216,7 +216,7 @@ export default function PerServices() {
                 <p className="flex items-center justify-start  text-base leading-4 text-gray-800 dark:text-gray-300">
                   Concerns about this service?
                   <Link
-                    to="/contact"
+                    to="/centro-aesthetica/contact"
                     className="underline mx-2 flex items-center justify-start gap-2"
                   >
                     <Phone size={20} />

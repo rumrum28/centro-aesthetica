@@ -19,7 +19,7 @@ const UserButtons = () => {
         }}
       >
         <Link
-          to="/login"
+          to="/centro-aesthetica/login"
           className="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm hover:font-medium dark:text-white"
         >
           Login
@@ -33,7 +33,7 @@ const UserButtons = () => {
         />
 
         <Link
-          to="/register"
+          to="/centro-aesthetica/register"
           className="text-slate-600 hover:text-slate-800 px-3 py-2 rounded-md text-sm hover:font-medium dark:text-slate-200 dark:hover:text-white"
         >
           Register

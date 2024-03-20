@@ -98,7 +98,7 @@ export default function Login({ display }: { display: string }) {
         >
           <div className="w-full h-100">
             <Link
-              to="/"
+              to="/centro-aesthetica/"
               className="flex items-center text-xl font-bold font-serif tracking-tight bg-[#ceb700] dark:bg-logo whitespace-nowrap"
               style={{
                 color: 'transparent',
@@ -177,7 +177,7 @@ export default function Login({ display }: { display: string }) {
             <p className="mt-8 text-center">
               Need an account?{' '}
               <Link
-                to="/register"
+                to="/centro-aesthetica/register"
                 className="gold__text font-medium text-lg hover:font-bold"
               >
                 Register

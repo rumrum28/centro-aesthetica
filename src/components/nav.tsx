@@ -28,7 +28,7 @@ export default function Nav() {
             <div className="flex items-center justify-between h-24 pl-2">
               <div className="flex-shrink-0 cursor-pointer">
                 <Link
-                  to="/"
+                  to="/centro-aesthetica/"
                   className="flex items-center text-xl font-bold font-serif tracking-tight bg-[#ceb700] dark:bg-logo whitespace-nowrap"
                   style={{
                     color: 'transparent',

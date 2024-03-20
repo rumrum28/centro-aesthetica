@@ -10,7 +10,7 @@ export default function LoginChecker() {
 
   useEffect(() => {
     if (user) {
-      navigate('/')
+      navigate('/centro-aesthetica/')
     }
   }, [user])
 

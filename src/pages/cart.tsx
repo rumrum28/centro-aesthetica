@@ -86,7 +86,7 @@ const Cart = () => {
             </div>
 
             <Link
-              to="/book-services"
+              to="/centro-aesthetica/book-services"
               className="flex items-center justify-start h-6"
             >
               <ArrowBackIcon className="dark:text-white" />

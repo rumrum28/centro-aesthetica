@@ -44,7 +44,7 @@ const LoginModal = () => {
     </Box>
   )
 
-  const handleRedirect = () => navigate('/login')
+  const handleRedirect = () => navigate('/centro-aesthetica/login')
 
   return (
     <>

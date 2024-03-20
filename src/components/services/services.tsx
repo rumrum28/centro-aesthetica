@@ -40,7 +40,11 @@ const SingleService = ({ product }: { product: Props }) => {
         <Button
           variant="contained"
           className="gold"
-          onClick={() => navigate(`/book-services/service?id=${product.id}`)}
+          onClick={() =>
+            navigate(
+              `/centro-aesthetica/book-services/service?id=${product.id}`
+            )
+          }
         >
           View
         </Button>

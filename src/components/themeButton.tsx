@@ -68,7 +68,7 @@ const ThemeButton = () => {
             />
 
             <Link
-              to="/register"
+              to="/centro-aesthetica/register"
               className="text-gray-500 hover:text-gray-800  px-3 py-2 rounded-md text-sm font-medium dark:text-gray-400 dark:hover:text-white"
             >
               Register

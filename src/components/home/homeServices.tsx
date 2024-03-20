@@ -31,7 +31,7 @@ const HomeServices = () => {
 
         <div className="w-full flex justify-center pt-10">
           <Link
-            to="/book-services"
+            to="/centro-aesthetica/book-services"
             className="bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-50 px-8 py-3 rounded-md font-medium hover:bg-slate-100 dark:hover:bg-slate-700 transition duration-200"
           >
             See More ...

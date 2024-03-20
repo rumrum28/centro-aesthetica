@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="container overflow-hidden flex flex-col lg:flex-row justify-between mx-auto px-4 ">
           <Link
-            to="/"
+            to="/centro-aesthetica/"
             className="flex items-start text-xl font-bold font-serif tracking-tight bg-[#ceb700] dark:bg-logo whitespace-nowrap"
             style={{
               color: 'transparent',
@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="/centro-aesthetica/about"
                   className="inline-block py-2 pl-3 pr-5 text-gray-600 hover:text-[#57480e] dark:hover:text-white no-underline"
                 >
                   About Us
@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/privacy-policy"
+                  to="/centro-aesthetica/privacy-policy"
                   className="inline-block py-2 pl-3 pr-5 text-gray-600 hover:text-[#57480e] dark:hover:text-white no-underline"
                 >
                   Privacy Policy
@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/terms-and-conditions"
+                  to="/centro-aesthetica/terms-and-conditions"
                   className="inline-block py-2 pl-3 pr-5 text-gray-600 hover:text-[#57480e] dark:hover:text-white no-underline"
                 >
                   Terms & Conditions
@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/faq"
+                  to="/centro-aesthetica/faq"
                   className="inline-block py-2 pl-3 pr-5 text-gray-600 hover:text-[#57480e] dark:hover:text-white no-underline"
                 >
                   FAQ

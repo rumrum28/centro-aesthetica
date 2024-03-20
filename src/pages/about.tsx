@@ -12,7 +12,10 @@ export default function About() {
           <div className="col-md-12">
             <p className="indent-5 pb-5">
               Centro Aesthetica is a medical clinic located in{' '}
-              <Link to="/our-locations" className="text-primary underline">
+              <Link
+                to="/centro-aesthetica/our-locations"
+                className="text-primary underline"
+              >
                 see locations
               </Link>
               . We specialize in providing top-notch aesthetic and medical

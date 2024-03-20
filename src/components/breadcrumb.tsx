@@ -18,7 +18,7 @@ const Breadcrumb = ({
               <ul className="flex items-center justify-start">
                 <li className="flex items-center">
                   <Link
-                    to="/"
+                    to="/centro-aesthetica/"
                     className="pr-1 text-base font-medium text-body-color hover:text-primary"
                   >
                     Home
