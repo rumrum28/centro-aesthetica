@@ -15,11 +15,13 @@ const Cart = () => {
 
   useEffect(() => {
     //  calculate total
-    const total = bookings.reduce((acc, item) => {
-      return acc + item.price
-    }, 0)
-    setTotal(total)
-  }, [])
+    if (bookings) {
+      const total = (bookings as any).reduce((acc: any, item: any) => {
+        return acc + item.price
+      }, 0)
+      setTotal(total)
+    }
+  }, [bookings])
 
   const cancelBooking = (id: number) => {
     const removeFromCart = bookings.filter((e: any) => {
