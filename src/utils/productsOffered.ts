@@ -14,8 +14,11 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: '/images/body-2.jpg',
+    image: ['/images/anti-acne-facial.jpg', '/images/anti-acne-facial.jpg'],
     duration: 60,
+    type: 'facial',
+    description:
+      'This is a facial treatment that is designed to help clear and prevent acne. A deep cleansing facial that is designed to help clear and prevent acne.',
   },
   {
     id: 2,
@@ -30,8 +33,11 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: '/images/body-2.jpg',
+    image: ['/images/anti-aging-facial.jpg', '/images/anti-aging-facial.jpg'],
     duration: 60,
+    type: 'facial',
+    description:
+      'Pamper yourself with our anti-aging facial treatment. This facial is designed to help reduce the appearance of fine lines and wrinkles',
   },
   {
     id: 3,
@@ -46,8 +52,11 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: '/images/body-2.jpg',
+    image: ['/images/brightening-facial.jpg', '/images/brightening-facial.jpg'],
     duration: 60,
+    type: 'facial',
+    description:
+      'This facial treatment is designed to help brighten and even out your skin tone. We use products that are designed to help improve overall skin texture, tone and appearance.',
   },
   {
     id: 4,
@@ -61,8 +70,11 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'moisturizing cream / sunblock',
     ],
-    image: '/images/body-2.jpg',
+    image: ['/images/regular-facial.jpg', '/images/regular-facial.jpg'],
     duration: 60,
+    type: 'facial',
+    description:
+      'This facial treatment is designed to help brighten and even out your skin tone and improve overall skin texture, tone and appearance.',
   },
   {
     id: 5,
@@ -75,31 +87,41 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: '/images/body-2.jpg',
+    image: ['/images/classic-facial.jpg', '/images/classic-facial.jpg'],
     duration: 60,
+    type: 'facial',
+    description:
+      'This facial treatment is designed to help brighten and even out your skin tone and improve overall skin texture, tone and appearance.',
   },
   {
     id: 6,
     title: 'Hydra Facial',
     price: 1000,
     packagePrice: 3000,
-    description: 'Package 3 + 1 sessions',
+    description:
+      'Package 3 + 1 sessions. With free Acne set cosmetics and free 1 session of RF slimming. Promo until December 31, 2021.',
     tags: [
       'deep exfoliation that clean your pores',
       'help improve overall skin texture',
       'tone and apperance',
     ],
-    image: '/images/body-2.jpg',
+    image: ['/images/hydra-facial.jpg', '/images/hydra-facial.jpg'],
     duration: 60,
+    type: 'facial',
   },
   {
     id: 7,
     title: 'Acne Therapy Package',
     price: 1250,
     packagePrice: 5000,
-    description: 'Package 4 + 1 sessions. With free Acne set cosmetics',
-    image: '/images/body-2.jpg',
+    description:
+      'Package 4 + 1 sessions. With free Acne set cosmetics. Complete set of acne treatment. Comes with free 1 session of RF slimming. Promo until December 31, 2021.',
+    image: [
+      '/images/acne-therapy-package.jpg',
+      '/images/acne-therapy-package.jpg',
+    ],
     duration: 60,
+    type: 'facial',
   },
   {
     id: 8,
@@ -109,8 +131,14 @@ export const ServicesOffered: Services = [
       'mechanical exfoliation that removes excess oil',
       'dirt and dead cells on the surface of the skin to reveal younger brighter skin',
     ],
-    image: '/images/body-2.jpg',
+    image: [
+      '/images/complete-facial-with-diamond-peel.jpg',
+      '/images/complete-facial-with-diamond-peel.jpg',
+    ],
     duration: 60,
+    type: 'facial',
+    description:
+      'This is a complete facial treatment that includes a diamond peel. It is designed to help brighten and even out your skin tone and improve overall skin texture, tone and appearance.',
   },
 ]
 

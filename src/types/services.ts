@@ -4,12 +4,13 @@ export type Tags = {
   id: number
   title: string
   price: number
-  tags?: string[] | null
+  tags?: string[]
   packagePrice?: number | null
-  description?: string | null
-  image?: string | null
+  description: string
+  image: string[]
   duration: number
   dateSelected?: Dayjs | null
+  type: string
 }
 
 export type Services = Tags[]

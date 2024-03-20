@@ -23,7 +23,7 @@ export default function Nav() {
       <CssBaseline />
       {/* <HideOnScroll> */}
       <AppBar sx={{ backgroundColor: 'white' }}>
-        <nav className="bg-header-pattern dark:bg-header-patterndark duration-100">
+        <nav className="bg-header-pattern dark:bg-header-patterndark duration-100 bg-cover">
           <div className="max-w-6xl mx-auto px-2">
             <div className="flex items-center justify-between h-24 pl-2">
               <div className="flex-shrink-0 cursor-pointer">

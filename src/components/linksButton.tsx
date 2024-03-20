@@ -19,7 +19,7 @@ export default function LinksButton() {
       <Badge
         color="error"
         overlap="rectangular"
-        badgeContent={(bookings as []).length}
+        badgeContent={bookings && bookings.length}
       >
         <Link
           to="/book-services"

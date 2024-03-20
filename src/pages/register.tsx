@@ -38,94 +38,84 @@ export default function Register() {
   }
 
   const registerHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsLoading(true)
-    let hasNumber = false,
-      hasLower = false,
-      passwordSame = false
-
-    if (!firstName) {
-      setIsLoading(false)
-      return setSnackbar(true, 'Please enter your first name')
-    }
-
-    if (!lastName) {
-      setIsLoading(false)
-      return setSnackbar(true, 'Please enter your last name')
-    }
-
-    if (!checkEmail(email)) {
-      setIsLoading(false)
-      return setEmailChecker('Invalid email')
-    }
-    setEmailChecker('')
-
-    if (!checkPassword(password)) {
-      setIsLoading(false)
-      return setPasswordChecker('Password must be at least 5 characters')
-    }
-    setPasswordChecker('')
-    if (/\d/.test(password)) {
-      hasNumber = true
-    } else {
-      setIsLoading(false)
-      return setPasswordChecker('Must contain at least 1 number')
-    }
-    if (/[a-z]/.test(password)) {
-      hasLower = true
-    } else {
-      setIsLoading(false)
-      return setPasswordChecker('Must contain at least 1 lowercase letter')
-    }
-
-    setPasswordChecker('')
-
-    if (password && passwordRetype) {
-      if (password === passwordRetype) {
-        passwordSame = true
-      } else {
-        setIsLoading(false)
-        return setPasswordRetypeChecker("Passwords don't match")
-      }
-    } else {
-      setIsLoading(false)
-      return setPasswordRetypeChecker("Password fields can't be empty")
-    }
-    setPasswordRetypeChecker('')
-    //end of checking password
-
-    let data = JSON.stringify({
-      name: firstName + ' ' + lastName,
-      email: email,
-      password: password,
-    })
-
-    let config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'http://127.0.0.1:8000/api/register',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      data: data,
-    }
-
-    if (hasNumber && hasLower && passwordSame) {
-      try {
-        await axios.request(config).then((response) => {
-          if (response.data?.token) isLoggingIn(response.data)
-          const message = response.data?.message || 'Login successful'
-
-          setSnackbar(true, message)
-        })
-      } catch (error: any) {
-        const message = 'Error connecting to server.'
-        setSnackbar(true, error.message || message)
-        console.log(error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
+    // e.preventDefault()
+    // setIsLoading(true)
+    // let hasNumber = false,
+    //   hasLower = false,
+    //   passwordSame = false
+    // if (!firstName) {
+    //   setIsLoading(false)
+    //   return setSnackbar(true, 'Please enter your first name')
+    // }
+    // if (!lastName) {
+    //   setIsLoading(false)
+    //   return setSnackbar(true, 'Please enter your last name')
+    // }
+    // if (!checkEmail(email)) {
+    //   setIsLoading(false)
+    //   return setEmailChecker('Invalid email')
+    // }
+    // setEmailChecker('')
+    // if (!checkPassword(password)) {
+    //   setIsLoading(false)
+    //   return setPasswordChecker('Password must be at least 5 characters')
+    // }
+    // setPasswordChecker('')
+    // if (/\d/.test(password)) {
+    //   hasNumber = true
+    // } else {
+    //   setIsLoading(false)
+    //   return setPasswordChecker('Must contain at least 1 number')
+    // }
+    // if (/[a-z]/.test(password)) {
+    //   hasLower = true
+    // } else {
+    //   setIsLoading(false)
+    //   return setPasswordChecker('Must contain at least 1 lowercase letter')
+    // }
+    // setPasswordChecker('')
+    // if (password && passwordRetype) {
+    //   if (password === passwordRetype) {
+    //     passwordSame = true
+    //   } else {
+    //     setIsLoading(false)
+    //     return setPasswordRetypeChecker("Passwords don't match")
+    //   }
+    // } else {
+    //   setIsLoading(false)
+    //   return setPasswordRetypeChecker("Password fields can't be empty")
+    // }
+    // setPasswordRetypeChecker('')
+    // //end of checking password
+    // let data = JSON.stringify({
+    //   name: firstName + ' ' + lastName,
+    //   email: email,
+    //   password: password,
+    // })
+    // let config = {
+    //   method: 'post',
+    //   maxBodyLength: Infinity,
+    //   url: 'http://127.0.0.1:8080/api/register',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   data: data,
+    // }
+    // if (hasNumber && hasLower && passwordSame) {
+    //   try {
+    //     await axios.request(config).then((response) => {
+    //       if (response.data?.token) isLoggingIn(response.data)
+    //       const message = response.data?.message || 'Login successful'
+    //       setSnackbar(true, message)
+    //     })
+    //   } catch (error: any) {
+    //     const message = 'Error connecting to server.'
+    //     setSnackbar(true, error.message || message)
+    //     console.log(error)
+    //   } finally {
+    //     setIsLoading(false)
+    //   }
+    // }
   }
 
   return (

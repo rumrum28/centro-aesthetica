@@ -3,7 +3,7 @@ import FollowUsIcons from './followUsIcons'
 
 const Footer = () => {
   return (
-    <footer className="bg-header-pattern dark:bg-header-patterndark text-white pt-12 pb-8 border-t">
+    <footer className="bg-header-pattern dark:bg-header-patterndark text-white pt-12 pb-8 border-t bg-cover">
       <div className="max-w-6xl mx-auto">
         <div className="container overflow-hidden flex flex-col lg:flex-row justify-between mx-auto px-4 ">
           <Link
@@ -22,7 +22,7 @@ const Footer = () => {
               className="w-64"
             />
           </Link>
-          <div className="w-3/4 block sm:flex text-sm mt-6 lg:mt-0">
+          <div className="md:3/4 lg:w-2/4 block sm:flex text-sm mt-6 lg:mt-0">
             <ul className="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
               <li className="inline-block py-2 px-3 text-black dark:text-white uppercase font-medium tracking-wide">
                 Company

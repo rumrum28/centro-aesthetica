@@ -28,57 +28,49 @@ export default function Login({ display }: { display: string }) {
   }
 
   const loginHandler = async () => {
-    setIsLoading(true)
-
-    if (!checkEmail(email)) {
-      setEmailChecker('Please enter a valid email address')
-      return setIsLoading(false)
-    }
-    setEmailChecker('')
-
-    if (!password) {
-      setPasswordChecker('Please enter a password')
-      return setIsLoading(false)
-    }
-    setPasswordChecker('')
-
-    if (password.length < 5) {
-      setPasswordChecker('Password must be at least 5 characters long')
-      return setIsLoading(false)
-    }
-    setPasswordChecker('')
-
-    const url: string = import.meta.env.VITE_LOGIN_API
-
-    let data = JSON.stringify({
-      email,
-      password,
-    })
-
-    let config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'http://127.0.0.1:8000/api/login',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      data: data,
-    }
-
-    try {
-      await axios.request(config).then((response) => {
-        if (response.data?.token) isLoggingIn(response.data)
-        const message = response.data?.message || 'Login successful'
-
-        setSnackbar(true, message)
-      })
-    } catch (error: any) {
-      const message = 'Error connecting to server.'
-      setSnackbar(true, error.message || message)
-      console.log(error)
-    } finally {
-      setIsLoading(false)
-    }
+    // setIsLoading(true)
+    // if (!checkEmail(email)) {
+    //   setEmailChecker('Please enter a valid email address')
+    //   return setIsLoading(false)
+    // }
+    // setEmailChecker('')
+    // if (!password) {
+    //   setPasswordChecker('Please enter a password')
+    //   return setIsLoading(false)
+    // }
+    // setPasswordChecker('')
+    // if (password.length < 5) {
+    //   setPasswordChecker('Password must be at least 5 characters long')
+    //   return setIsLoading(false)
+    // }
+    // setPasswordChecker('')
+    // const url: string = import.meta.env.VITE_LOGIN_API
+    // let data = JSON.stringify({
+    //   email,
+    //   password,
+    // })
+    // let config = {
+    //   method: 'post',
+    //   maxBodyLength: Infinity,
+    //   url: 'http://127.0.0.1:8080/api/login',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   data: data,
+    // }
+    // try {
+    //   await axios.request(config).then((response) => {
+    //     if (response.data?.token) isLoggingIn(response.data)
+    //     const message = response.data?.message || 'Login successful'
+    //     setSnackbar(true, message)
+    //   })
+    // } catch (error: any) {
+    //   const message = 'Error connecting to server.'
+    //   setSnackbar(true, error.message || message)
+    //   console.log(error)
+    // } finally {
+    //   setIsLoading(false)
+    // }
   }
 
   return (

@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie'
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { Tags } from '../types/services'
+import { Services, Tags } from '../types/services'
 
 type UserState = {
   name: string
@@ -19,9 +19,9 @@ type LoginUserState = {
 type Zustand = {
   logout: () => void
   user: LoginUserState | null
-  bookings: Tags | []
+  bookings: Services | []
   isLoggingIn: (session: Session) => void
-  addBooking: (id: Tags) => void
+  addBooking: (id: Services) => void
   snackbar: {
     status: boolean
     message: string
@@ -46,9 +46,9 @@ const pucspispfjsf = (set: any) =>
         },
       }))
     },
-    addBooking: (data: Tags) => {
-      set((state: any) => ({
-        bookings: [...state.bookings, data],
+    addBooking: (data: Services) => {
+      set(() => ({
+        bookings: data,
       }))
     },
     snackbar: {

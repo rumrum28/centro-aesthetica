@@ -7,7 +7,7 @@ type Props = {
   title: string
   price: number
   packagePrice?: number | null
-  image?: string | null
+  image: string[]
 }
 
 const SingleService = ({ product }: { product: Props }) => {
@@ -15,10 +15,11 @@ const SingleService = ({ product }: { product: Props }) => {
 
   return (
     <div className="flex flex-col max-w-sm rounded overflow-hidden shadow-lg dark:border m-4">
-      <img
-        className="w-full"
-        src={product?.image || '/images/no-image.jpg'}
-        alt="Sunset in the mountains"
+      <div
+        className="w-full h-[180px] bg-center bg-no-repeat bg-cover"
+        style={{
+          backgroundImage: `url(${product.image[0] || '/images/no-image.jpg'})`,
+        }}
       />
       <div className="px-4 pt-4 flex-1">
         <div className="text-primary font-bold text-xl dark:text-darkgold">
