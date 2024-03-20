@@ -12,17 +12,17 @@ const HomeServices = () => {
           <PerHomeServices
             title="Anti Acne Facial"
             paragraph="An anti-acne facial is a specialized skincare treatment designed to combat and reduce acne breakouts."
-            image="/images/anti-acne-facial.jpg"
+            image="/centro-aesthetica/images/anti-acne-facial.jpg"
           />
           <PerHomeServices
             title="Anti Aging Facial"
             paragraph="The focus of this facial is to target common skin concerns associated with aging, such as fine lines, wrinkles, loss of elasticity, and uneven skin tone."
-            image="/images/anti-aging-facial.jpg"
+            image="/centro-aesthetica/images/anti-aging-facial.jpg"
           />
           <PerHomeServices
             title="Brightening Facial"
             paragraph="This facial targets dull, uneven skin tone, dark spots, and pigmentation issues, aiming to promote a brighter and more glowing complexion."
-            image="/images/brightening-facial.jpg"
+            image="/centro-aesthetica/images/brightening-facial.jpg"
           />
         </div>
 

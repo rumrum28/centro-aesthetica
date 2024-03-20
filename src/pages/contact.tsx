@@ -21,7 +21,7 @@ export default function Contact() {
           <div className="flex flex-wrap py-8 flex-col sm:flex-row p-5">
             <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 m-auto sm:m-0">
               <img
-                src="/images/ruby-roces-bw.jpg"
+                src="/centro-aesthetica/images/ruby-roces-bw.jpg"
                 alt="ceo"
                 width={128}
                 height={128}

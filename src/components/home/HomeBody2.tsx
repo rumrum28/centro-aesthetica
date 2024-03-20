@@ -8,7 +8,10 @@ const HomeBody2 = () => {
               className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <img src="/images/login-banner.jpg" alt="about image" />
+              <img
+                src="/centro-aesthetica/images/login-banner.jpg"
+                alt="about image"
+              />
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">

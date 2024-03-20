@@ -53,7 +53,7 @@ const HomeBody = () => {
               data-wow-delay=".2s"
             >
               <img
-                src="/images/body-1.jpg"
+                src="/centro-aesthetica/images/body-1.jpg"
                 alt="about-image"
                 className="mx-auto w-full md:w-auto max-w-full lg:mr-0 h-auto md:h-[576px]"
               />

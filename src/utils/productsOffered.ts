@@ -14,7 +14,10 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/anti-acne-facial.jpg', '/images/anti-acne-facial.jpg'],
+    image: [
+      '/centro-aesthetica/images/anti-acne-facial.jpg',
+      '/centro-aesthetica/images/anti-acne-facial.jpg',
+    ],
     duration: 60,
     type: 'facial',
     description:
@@ -33,7 +36,10 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/anti-aging-facial.jpg', '/images/anti-aging-facial.jpg'],
+    image: [
+      '/centro-aesthetica/images/anti-aging-facial.jpg',
+      '/centro-aesthetica/images/anti-aging-facial.jpg',
+    ],
     duration: 60,
     type: 'facial',
     description:
@@ -52,7 +58,10 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/brightening-facial.jpg', '/images/brightening-facial.jpg'],
+    image: [
+      '/centro-aesthetica/images/brightening-facial.jpg',
+      '/centro-aesthetica/images/brightening-facial.jpg',
+    ],
     duration: 60,
     type: 'facial',
     description:
@@ -70,7 +79,10 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'moisturizing cream / sunblock',
     ],
-    image: ['/images/regular-facial.jpg', '/images/regular-facial.jpg'],
+    image: [
+      '/centro-aesthetica/images/regular-facial.jpg',
+      '/centro-aesthetica/images/regular-facial.jpg',
+    ],
     duration: 60,
     type: 'facial',
     description:
@@ -87,7 +99,10 @@ export const ServicesOffered: Services = [
       'whitening mask',
       'whitening cream / sunblock',
     ],
-    image: ['/images/classic-facial.jpg', '/images/classic-facial.jpg'],
+    image: [
+      '/centro-aesthetica/images/classic-facial.jpg',
+      '/centro-aesthetica/images/classic-facial.jpg',
+    ],
     duration: 60,
     type: 'facial',
     description:
@@ -105,7 +120,10 @@ export const ServicesOffered: Services = [
       'help improve overall skin texture',
       'tone and apperance',
     ],
-    image: ['/images/hydra-facial.jpg', '/images/hydra-facial.jpg'],
+    image: [
+      '/centro-aesthetica/images/hydra-facial.jpg',
+      '/centro-aesthetica/images/hydra-facial.jpg',
+    ],
     duration: 60,
     type: 'facial',
   },
@@ -117,8 +135,8 @@ export const ServicesOffered: Services = [
     description:
       'Package 4 + 1 sessions. With free Acne set cosmetics. Complete set of acne treatment. Comes with free 1 session of RF slimming. Promo until December 31, 2021.',
     image: [
-      '/images/acne-therapy-package.jpg',
-      '/images/acne-therapy-package.jpg',
+      '/centro-aesthetica/images/acne-therapy-package.jpg',
+      '/centro-aesthetica/images/acne-therapy-package.jpg',
     ],
     duration: 60,
     type: 'facial',
@@ -132,8 +150,8 @@ export const ServicesOffered: Services = [
       'dirt and dead cells on the surface of the skin to reveal younger brighter skin',
     ],
     image: [
-      '/images/complete-facial-with-diamond-peel.jpg',
-      '/images/complete-facial-with-diamond-peel.jpg',
+      '/centro-aesthetica/images/complete-facial-with-diamond-peel.jpg',
+      '/centro-aesthetica/images/complete-facial-with-diamond-peel.jpg',
     ],
     duration: 60,
     type: 'facial',

@@ -82,7 +82,7 @@ export default function Login({ display }: { display: string }) {
         {display === 'full-login' && (
           <div className="hidden lg:block w-80 md:w-5/6 h-[calc(100vh-64px)]">
             <img
-              src="/images/login-banner.jpg"
+              src="/centro-aesthetica/images/login-banner.jpg"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -167,7 +167,11 @@ export default function Login({ display }: { display: string }) {
               className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
             >
               <div className="flex items-center justify-center">
-                <img src="/svg/google.svg" alt="" className="w-6 h-6" />
+                <img
+                  src="/centro-aesthetica/svg/google.svg"
+                  alt=""
+                  className="w-6 h-6"
+                />
                 <span className="ml-4">Log in with Google</span>
               </div>
             </button>

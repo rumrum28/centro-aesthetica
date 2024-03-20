@@ -18,7 +18,9 @@ const SingleService = ({ product }: { product: Props }) => {
       <div
         className="w-full h-[180px] bg-center bg-no-repeat bg-cover"
         style={{
-          backgroundImage: `url(${product.image[0] || '/images/no-image.jpg'})`,
+          backgroundImage: `url(${
+            product.image[0] || '/centro-aesthetica/images/no-image.jpg'
+          })`,
         }}
       />
       <div className="px-4 pt-4 flex-1">
